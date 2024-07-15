@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+<div th:fragment="footer">
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>Redes de la Empresa:</h3>
+            <div class="social-icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <div class="contact-info">
+                <h4>Contacto:</h4>
+                <p>Correo: Huamaniyallij@gmail.com</p>
+                <p>+51 971 782 252</p>
+                <p>+51 944 215 390</p>
+                <p>Dirección: AV. PACHACUTEQ NRO. 307 DPTO. 202 (FT PERU RAIL 2DO PISO, PTA CL ROJO), Cusco - Cusco - WANCHAQ</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <h3>Servicios:</h3>
+            <ul>
+                <li>Paquetes Turísticos</li>
+                <li>Full Day</li>
+                <li>City Tour</li>
+                <li>Paquetes Escolares</li>
+                <li>Días Festivos para viajar</li>
+            </ul>
+            <p>RUC: 20527613010</p>
+            <p>EMPRESA DE TRANSPORTES TURISTICOS ORTEGA GONZALES SOCIEDAD DE RESPONSABILIDAD LIMITADA</p>
+            <p style="background-color:  #171717;  color:  #171717 ">.dsdf</p>
+            <p style="background-color:  #171717;  color:  #171717 ">.dsdf</p>
+            <p style="background-color:  #171717;  color:  #171717 ">.dsdf</p>
+            <p style="text-align: center;">@Ortega Tours Perú 2024</p>
+        </div>
+        <div class="footer-right">
+            <h3>Contacto:</h3>
+            <form action="#" method="post">
+                <input type="text" name="fullname" placeholder="Nombres y Apellidos">
+                <input type="email" name="email" placeholder="Correo">
+                <input type="tel" name="phone" placeholder="Teléfono">
+                <textarea name="message" rows="4" placeholder="Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </footer>
+
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/footer.js}"></script>
+</body>
+</html>
