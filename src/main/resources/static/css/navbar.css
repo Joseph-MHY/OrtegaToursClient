@@ -1,0 +1,103 @@
+/* Estilos para el logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo según tu diseño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo span {
+    color: white; /* Color del texto */
+    font-size: 1.2em; /* Tamaño del texto */
+}
+
+/* Estilos para el resto de la barra de navegación (como ya definiste anteriormente) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4BB609; /* Tonalidad de verde */
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos para el espaciador */
+.spacer {
+    flex: 1;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dbd830; /* Tonalidad de amarillo  */
+}
+
+/* Estilos para la información de contacto */
+.contact-info {
+    color: white;
+    text-align: right;
+    font-size: 0.9em;
+    margin-left: 20px;
+    margin-right: 20px;/* Ajusta el margen derecho para separar del borde */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Ajusta el margen vertical de cada párrafo */
+}
+
+/* Estilos para el botón de login */
+.login-button {
+    margin-left: 20px;
+}
+
+.login-button a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.login-button a:hover {
+    color: #dbd830; /* Tonalidad de amarillo */
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+
+    .login-button {
+        align-self: flex-end;
+    }
+}

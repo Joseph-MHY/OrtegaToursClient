@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" th:href="@{/css/principal.css}"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+<!-- fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <h2>Descubre Cuzco en un Full Day</h2>
+        <p>Explora Cuzco y sus maravillas en un solo día. Vive su historia y cultura con nuestro tour completo. ¡Reserva tu aventura con Ortega Tours!</p>
+        <a href="#" class="banner-button">Ver paquete</a>
+    </div>
+
+    <!-- Sección de Destinos de Turismo -->
+    <section class="destinos">
+        <div class="titulo">
+            <h2>DESTINOS DE TURISMO</h2>
+        </div>
+        <div class="contenido">
+            <!-- Parte izquierda con tarjetas de paquetes -->
+            <div class="tarjetas">
+                <!-- Primera fila -->
+                <div class="fila-tarjetas">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                </div>
+                <!-- Segunda fila -->
+                <div class="fila-tarjetas">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                </div>
+                <!-- tercera fila -->
+                <div class="fila-tarjetas">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <img th:src="@{/images/valle.jpg}" alt="Imagen del paquete">
+                        <h3>FULL DAY VALLE SAGRADO SUR </h3>
+                        <p>07:30 – 08:00 hrs. comenzaremos el recojo en los hoteles para iniciar el recorrido por el “Valle Sagrado de los Incas”,...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte derecha con imágenes y texto encima -->
+            <div class="imagenes">
+                <!-- Imagen 1 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima1.png}" alt="Imagen 1">
+                    <a href="#">Ver más</a>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima2.png}" alt="Imagen 2">
+                    <a href="#">Ver más</a>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima3.png}" alt="Imagen 3">
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--  fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/principal.js}"></script>
+</body>
+</html>
