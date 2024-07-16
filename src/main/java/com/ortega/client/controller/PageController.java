@@ -13,4 +13,21 @@ public class PageController {
     public String pagprincipal() {
         return "principal.html";
     }
+
+    // Página personalizacion
+    @GetMapping("/personalisacion")
+    public String personalicion() {
+        return "personalisacion.html";
+    }
+
+    // Página promociones
+    @GetMapping("/promociones")
+    public String promociones() {
+        return "promociones.html";
+    }
+    // Página informacion
+    @GetMapping("/informacion")
+    public String informacion() {
+        return "informacion.html";
+    }
 }

@@ -20,9 +20,9 @@
     align-items: center;
     justify-content: space-between;
     background-color: #4BB609; /* Tonalidad de verde */
-    padding: 15px;
+    padding: 1px;
     font-family: 'Arial', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -36,6 +36,7 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    cursor: pointer; /* Hacer que el cursor se convierta en una mano */
 }
 
 .nav-links li {
@@ -62,13 +63,13 @@
     margin-right: 20px;/* Ajusta el margen derecho para separar del borde */
 }
 
-.contact-info p {
-    margin: 5px 0; /* Ajusta el margen vertical de cada párrafo */
-}
+
 
 /* Estilos para el botón de login */
 .login-button {
     margin-left: 20px;
+    font-size: 20px;
+    margin-right:20px
 }
 
 .login-button a {
