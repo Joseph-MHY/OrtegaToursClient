@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/promocion.css}"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <h2>Promociones</h2>
+    </div>
+
+    <!-- Sección de Destinos de Turismo -->
+    <section class="promos">
+        <div class="titulo">
+            <h2>DESTINOS DE TURISMO</h2>
+        </div>
+        <div class="contenido">
+            <!-- Parte izquierda con tarjetas de promociones -->
+            <div class="tarjetas">
+                <!-- Primera fila -->
+                <div class="fila-tarjetas">
+                    <!-- Tarjeta 1 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <div class="row">
+                            <div class="col-img">
+                                <img th:src="@{/images/tours_4ruinas.jpg}" alt="Imagen del paquete">
+                            </div>
+                            <div class="col-content">
+                                <h3>City Tour Cusco + 04 Ruinas</h3>
+                                <p>City Tour Cusco + 04 Ruinas El City Tour Cusco – 04 Ruinas es uno de los más solicitados por todo aquel viajero visitante...</p>
+                                <div class="costo">
+                                    <p > Por :s/119.48</p>
+                                </div>
+                                <button>Ver más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <div class="row">
+                            <div class="col-img">
+                                <img th:src="@{/images/vallesagradopromo.jpg}" alt="Imagen del paquete">
+                            </div>
+                            <div class="col-content">
+                                <h3>FULL DAY VALLE SAGRADO </h3>
+                                <p>¿Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado....</p>
+                                <div class="costo">
+                                    <p > Por :s/82.14</p>
+                                </div>
+                                <button>Ver más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="tarjeta" onclick="location.href='#';">
+                        <div class="row">
+                            <div class="col-img">
+                                <img th:src="@{/images/7colorespromo.jpg}" alt="Imagen del paquete">
+                            </div>
+                            <div class="col-content">
+                                <h3>FULL DAY MONTAÑA DE 7 COLORES </h3>
+                                <p>Pasamos a recogerlos por el hotel a las 3 am, nos dirigimos al sur de la ciudad de cuzco, tiempo de viaje 2 horas y 45 minutos...</p>
+                                <div class="costo">
+                                    <p > Por :s/224.03</p>
+                                </div>
+                                <button>Ver más</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte derecha con imágenes y texto encima -->
+            <div class="imagenes">
+                <!-- Imagen 1 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima1.png}" alt="Imagen 1">
+                    <a href="#">Ver más</a>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima2.png}" alt="Imagen 2">
+                    <a href="#">Ver más</a>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="imagen">
+                    <img th:src="@{/images/ima3.png}" alt="Imagen 3">
+                    <a href="#">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/promocion.js}"></script>
+</body>
+</html>
