@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('/images/imagencusco.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%; /* Ajusta el ancho del cuadro transparente */
+    margin: 0 auto; /* Centra el cuadro horizontalmente */
+}
+
+.banner-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+    margin-top: 10px;
+}
+
+/* Estilos para la nueva sección */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #DFDFDF;
+}
+
+.info-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-image img {
+    width: 100%;
+    border: 5px solid white; /* Marco blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.info-content {
+    flex: 2;
+    padding: 20px;
+}
+
+.info-content h3 {
+    text-align: left;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #C7522C;
+}
+
+.info-content p {
+    text-align: left;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las tarjetas de Visión y Misión */
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #DFDFDF;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%; /* Ancho de las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: justify;
+}
+
+.card h3 {
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    color: #C7522C;
+}
+
+.card p {
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+.porque-nosotros-section {
+    padding: 2rem;
+    background-color:  #DFDFDF;
+    text-align: center;
+}
+
+.porque-nosotros-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.porque-nosotros-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.column {
+    flex: 1;
+}
+
+.item {
+    background-color: #DFDFDF;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centrar contenido dentro del item */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar icono horizontalmente */
+}
+
+.item ion-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #C7522C;
+}
+
+.item ion-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+     color: #C7522C;
+}
+
+.item p {
+    margin: 0;
+    font-size: 1rem;
+     color:  #7f8c8d;
+}

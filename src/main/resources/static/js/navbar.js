@@ -9,4 +9,8 @@
         window.location.href = '/user/informacion';  // Esta URL debe coincidir con la ruta definida en tu controlador
     }
 
+    function redirectToquiensomos() {
+        window.location.href = '/user/quiensomos';  // Esta URL debe coincidir con la ruta definida en tu controlador
+    }
+
 

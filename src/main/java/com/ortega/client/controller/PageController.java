@@ -30,4 +30,9 @@ public class PageController {
     public String informacion() {
         return "informacion.html";
     }
+    // Página informacion
+    @GetMapping("/quiensomos")
+    public String quiensomos() {
+        return "quienessomos.html";
+    }
 }

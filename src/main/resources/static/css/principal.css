@@ -78,8 +78,8 @@ body {
 
 /* Estilos tarjeta */
 .tarjeta {
-    background-color: white;
-    padding: 15px;
+    background-color:#AFAFAF;
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 250px;
@@ -94,18 +94,19 @@ body {
 }
 
 .tarjeta:hover {
-    background-color: #AFAFAF; /* Cambio de color al pasar el cursor */
+    background-color: white;  /* Cambio de color al pasar el cursor */
 }
 
 .tarjeta img {
     width: 100%;
-    height: auto;
+    height: 70%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 .tarjeta h3 {
     margin-bottom: 10px;
+
     text-align: center; /* Alineación centrada del título */
     font-size: 15px;
     color: #C7522C;  /* Cambia el color del texto según tu preferencia */
@@ -119,6 +120,8 @@ body {
     margin-bottom: 10px;
     font-family: 'Georgia', serif; /* Puedes ajustar el tipo de fuente si es necesario */
     font-weight: bold;
+    margin-left:5px;
+    margin-right:5px;
 }
 
 /* Estilos para las imágenes seccion */
