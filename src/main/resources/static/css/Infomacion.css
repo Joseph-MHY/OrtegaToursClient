@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Estilos para el banner */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('/images/imagencusco.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Informacion {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #DFDFDF;
+}
+
+.paquete-info {
+    width: 70%;
+    padding-right: 20px;
+    margin: 40px
+}
+
+.paquete-info .titulo {
+    font-size: 1.8em;
+    color: #C7522C;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+.paquete-info .descripcion {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+.paquete-info .subtitulo {
+    font-size: 1.5em;
+    color: #C7522C;
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.paquete-info .itinerario,
+.paquete-info .incluye,
+.paquete-info .condiciones {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+.paquete-info .itinerario li,
+.paquete-info .incluye li,
+.paquete-info .condiciones li {
+    margin-bottom: 10px;
+    color: #7f8c8d;
+    font-family: 'Georgia', serif;
+}
+
+.paquete-info .detalle-itinerario {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+
+.seccion_derecha {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.tarjeta {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3,
+.tarjeta h4,
+.tarjeta p {
+    margin: 10px 0;
+}
+
+.empresa-info .info-titulo {
+    text-align: center;
+    color:#000000;
+    font-family: 'Georgia', serif;
+    font-size:35px;
+    font-weight: bold;
+}
+
+.empresa-info .info-sub-titulo {
+    font-weight: bold;
+    text-align: left;
+    color:#000000;
+    font-size:20px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.telefono {
+    text-align: center;
+    color:#000000;
+}
+
+.telefono p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+
+.email {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.direccion {
+    text-align: center;
+    text-align: justify;
+    color: #7f8c8d;
+}
+
+.disponibilidad {
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarifa .textprecio {
+    font-size: 1.3em;
+    color:#C7522C;
+}
+
+.tarifa .precio {
+    font-size: 1.8em;
+    color: #0514AD;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nota {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reservar-btn {
+    background-color: #058419;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.reservar-btn:hover {
+    background-color: #333;
+}
+
+.icono-verde {
+    color: #4BB609; /* Color verde para los iconos de teléfono */
+}
+
+.icono-rojo {
+    color: #e74c3c; /* Color rojo para el icono de correo */
+}

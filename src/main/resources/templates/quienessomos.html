@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de quienes somos</title>
+    <link rel="stylesheet" th:href="@{/css/quienessomos.css}"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>QUIENES SOMOS</h2>
+            <p>En Ortega Tours, brindamos experiencias turísticas excepcionales en Cusco, combinando tradición y aventura para crear recuerdos inolvidables.</p>
+        </div>
+    </div>
+
+    <!-- Nueva sección -->
+    <div class="info-section">
+        <div class="info-image">
+            <img src="/images/flota01.jpeg" alt="Imagen de muestra">
+        </div>
+        <div class="info-content">
+            <h3>Te ayudamos a planificar tu viaje</h3>
+            <p>Ortega Gonzales SRL. nace con la idea de poder ofrecer los mejores tours de cada destino a visitar; en un solo sitio web y variedad de opciones para nuestros clientes de acuerdo a las posibilidades y gustos de cada uno tomando en cuenta un buen servicio y precio, que superen las expectativas de nuestros visitantes.</p>
+            <p>Contamos con el mejor equipo a su disposición, desde atención al cliente 24/7 y guías profesionales y calificados durante los servicios así como un transporte muy cómodo durante los tours.</p>
+            <p>Además contamos con todos los permisos y licencias por parte del gobierno y manejamos protocolos de bioseguridad durante la prestación de los servicios.</p>
+        </div>
+    </div>
+
+    <!-- Tarjetas de Visión y Misión -->
+    <div class="cards-section">
+        <div class="card">
+            <h3>Visión</h3>
+            <p>Ser reconocidos como el referente líder en transporte turístico en Cusco, ofreciendo experiencias de viaje seguras, cómodas y personalizadas que enriquezcan la visita de cada turista. Aspiramos a contribuir al desarrollo sostenible del turismo en la región, apoyando el bienestar de la comunidad local y destacándose por nuestra excelencia y compromiso con la satisfacción del cliente.</p>
+        </div>
+        <div class="card">
+            <h3>Misión</h3>
+            <p>Nuestra misión es ofrecer experiencias turísticas auténticas y personalizadas en Cusco, comprometiéndonos a sobrepasar las expectativas de nuestros pasajeros con un servicio de transporte seguro, cómodo y confiable. Y destacamos por nuestra capacidad para conectar a los viajeros con los destinos más emblemáticos de la región, proporcionando tours que celebran nuestra rica herencia cultural y natural.</p>
+        </div>
+    </div>
+
+    <!-- Sección "Porque nosotros" -->
+    <div class="porque-nosotros-section">
+        <h3>Porque Nosotros</h3>
+        <div class="porque-nosotros-columns">
+            <div class="column">
+                <div class="item">
+                    <ion-icon name="star-outline"></ion-icon>
+                    <h4>Mejor agente de viajes</h4>
+                    <p>Los mejores tours y variedad de opciones de cada tour en un solo sitio.</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <h4>Lugares hermosos</h4>
+                    <p>Tours, caminatas y recorridos a los mejores lugares de cada destino.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="item">
+                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    <h4>Confianza y seguridad</h4>
+                    <p>Contamos con todos los permisos y legalidades así como un equipo de trabajo profesional.</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <h4>Viajes apasionados</h4>
+                    <p>Equipo de trabajo apasionado por los viajes y predispuestos para poder ayudar a nuestros visitantes.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="item">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                    <h4>Mejor precio garantizado</h4>
+                    <p>Calidad de servicio garantizada al mejor precio.</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <h4>Reserva rápida</h4>
+                    <p>Soporte 24/7, comunicación rápida y reservas instantáneas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+</body>
+</html>

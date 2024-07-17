@@ -94,7 +94,7 @@ body {
     display: flex;
     cursor: pointer;
     transition: background-color 0.3s;
-    height: 300px; /* Altura fija para las tarjetas */
+    height: 250px; /* Altura fija para las tarjetas */
     overflow: hidden; /* Evita desbordamientos */
     margin-top: 20px;
     margin-left: 50px;
@@ -120,6 +120,8 @@ body {
     flex: 0 0 50%;
     max-width: 50%;
     padding-left: 15px;
+    padding-top:15px;
+    padding-bottom:20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +142,7 @@ body {
 
 .tarjeta p {
     font-size: 1em;
-    margin-bottom: 5px; /* Espacio reducido entre párrafos */
+    margin-bottom: 1px; /* Espacio reducido entre párrafos */
     font-family: 'Georgia', serif;
     text-align: justify;
 
@@ -185,5 +187,5 @@ body {
 }
 
 .costo p {
-    font-size: 25px; /* Tamaño de fuente ajustado */
+    font-size: 22px; /* Tamaño de fuente ajustado */
 }
