@@ -49,7 +49,7 @@ body {
 
 .paquete-info .descripcion {
     font-size: 1.1em;
-    color: #7f8c8d;
+    color: #21618C;
     font-family: 'Georgia', serif;
     margin-bottom: 20px;
     line-height: 1.6em;
@@ -76,13 +76,13 @@ body {
 .paquete-info .incluye li,
 .paquete-info .condiciones li {
     margin-bottom: 10px;
-    color: #7f8c8d;
+    color: #21618C;
     font-family: 'Georgia', serif;
 }
 
 .paquete-info .detalle-itinerario {
     font-size: 1.1em;
-    color: #7f8c8d;
+    color: #21618C;
     margin-bottom: 20px;
     line-height: 1.6em;
 }
@@ -134,18 +134,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7f8c8d;
+    color: #21618C;
 }
 
 .email {
     text-align: center;
-    color: #7f8c8d;
+    color: #21618C;
 }
 
 .direccion {
     text-align: center;
     text-align: justify;
-    color: #7f8c8d;
+    color: #21618C;
 }
 
 .disponibilidad {

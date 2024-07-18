@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/Infomacion.css}"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <h2>Ofrecemos más que un viaje, una experiencia inolvidable.</h2>
+    </div>
+
+    <section class="Informacion">
+        <div class="paquete-info">
+            <h3 class="titulo">Full Day Valle Sagrado | Todo Incluido</h3>
+            <p class="descripcion">¿Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado. En este Tour Todo Incluido recorrerás con nosotros los pueblos antiguos y principales conjuntos arquitectónicos. Disfruta la historia y misticismo de los Incas con nuestro Tour al Valle Sagrado!</p>
+
+            <h4 class="subtitulo">ITINERARIO:</h4>
+            <ul class="itinerario">
+                <p class="descripcion">08:30 am. Tour Valle Sagrado de los Incas: Visitaremos el pueblo de Pisac y su Mercado Artesanal, Qoya, Lamay, Calca, Yucay. Continuaremos nuestro recorrido hacia Urubamba, centro comercial del Valle, resaltan sus campiñas y su agradable clima al pie del nevado Chicón, aquí disfrutaremos de un almuerzo en restaurant turístico. </p>
+                <p class="descripcion">Luego seguiremos nuestro recorrido a Ollantaytambo; conjunto arquitectónico que fue en tiempos del Tahuantinsuyo un gigantesco complejo agrícola, administrativo, social, religioso y militar. Luego nos trasladaremos a Chinchero, el último punto del recorrido. Este pueblo es un bello ejemplo del estilo mestizo y colonial, a hora indicada regreso a Cusco y transfer a su Hotel.</p>
+
+            </ul>
+
+            <h4 class="subtitulo">Incluye:</h4>
+            <ul class="incluye">
+                <li>Traslados en unidad turística in/out Hotel</li>
+                <li>Almuerzo</li>
+                <li>Guía profesional en servicio Pool en inglés o español</li>
+                <li>Asistencia permanente</li>
+            </ul>
+            <h4 class="subtitulo">No Incluye:</h4>
+            <ul class="incluye">
+                <li>Ticket de ingreso:</li>
+                <li>Extranjeros S/ 70.00,</li>
+                <li>Peruanos S/ 40.00</li>
+            </ul>
+
+            <h4 class="subtitulo">Precio Por Persona:</h4>
+            <ul class="condiciones">
+                <li>Tour con almuerzo en restaurant Maizal: s/118.83</li>
+                <li>Tour con almuerzo en restaurant Alhambra: s/137.40 </li>
+                <li>Tour con almuerzo en restaurant Tunupa: s/155.97 </li>
+            </ul>
+        </div>
+
+        <div class="seccion_derecha">
+            <div class="tarjeta empresa-info">
+                <h3 class="info-titulo">Contáctenos</h3>
+                <p class="info-sub-titulo">Teléfonos</p>
+                <div class="telefono">
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 954 964 304</p>
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 920 470 208</p>
+                </div>
+                <p class="info-sub-titulo">Email</p>
+                <p class="email"><ion-icon name="mail-outline" class="icono-rojo"></ion-icon> reservas@kortegagonzales.com</p>
+                <p class="info-sub-titulo">Oficinas de Operaciones:</p>
+                <p class="direccion">AV. PACHACUTEQ NRO. 307 DPTO. 202 (FT PERU RAIL 2DO PISO, PTA CL ROJO), Cusco - Cusco - WANCHAQ</p>
+                <p class="disponibilidad">Disponible de lunes a domingo</p>
+            </div>
+            <div class="tarjeta tarifa">
+                <h4 class="textprecio">Tarifa:</h4>
+                <p class="precio">S/82.14 soles</p>
+                <p class="nota">(Cupones limitados)</p>
+                <button class="reservar-btn">Reservar</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+</body>
+</html>
