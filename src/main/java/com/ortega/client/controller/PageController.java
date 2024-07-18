@@ -28,8 +28,50 @@ public class PageController {
     // Página informacion
     @GetMapping("/informacion")
     public String informacion() {
-        return "informacion.html";
+        return "paginasinfo/informacion.html";
     }
+
+    // Página informacion
+    @GetMapping("/informacionpromo1")
+    public String informacionpromo1() {
+        return "paginasinfo/informacionpromo1.html";
+    }
+
+    @GetMapping("/informacionpromo2")
+    public String informacionpromo2() {
+        return "paginasinfo/informacionpromo2.html";
+    }
+    @GetMapping("/informaciontour1")
+    public String informaciontour1() {
+        return "paginasinfo/informaciontour1.html";
+    }
+    @GetMapping("/informaciontour2")
+    public String informaciontour2() {
+        return "paginasinfo/informaciontour2.html";
+    }
+    @GetMapping("/informaciontour3")
+    public String informaciontour3() {
+        return "paginasinfo/informaciontour3.html";
+    }
+    @GetMapping("/informaciontours4")
+    public String informaciontours4() {
+        return "paginasinfo/informaciontours4.html";
+    }
+    @GetMapping("/informaciontour5")
+    public String informaciontour5() {
+        return "paginasinfo/informaciontour5.html";
+    }
+    @GetMapping("/informaciontour6")
+    public String informaciontour6() {
+        return "paginasinfo/informaciontour6.html";
+    }
+
+    @GetMapping("/informacionpromo3")
+    public String informacionpromo3() {
+        return "paginasinfo/informacionpromo3.html";
+    }
+
+
     // Página informacion
     @GetMapping("/quiensomos")
     public String quiensomos() {

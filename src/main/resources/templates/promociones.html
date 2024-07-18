@@ -27,7 +27,7 @@
                 <!-- Primera fila -->
                 <div class="fila-tarjetas">
                     <!-- Tarjeta 1 -->
-                    <div class="tarjeta" onclick="location.href='#';">
+                    <div class="tarjeta" onclick="redirectToinformacionpromo1()">
                         <div class="row">
                             <div class="col-img">
                                 <img th:src="@{/images/tours_4ruinas.jpg}" alt="Imagen del paquete">
@@ -38,28 +38,29 @@
                                 <div class="costo">
                                     <p > Por :s/119.48</p>
                                 </div>
-                                <button>Ver más</button>
+                                <button onclick="redirectToinformacionpromo1()">Ver más</button>
+
                             </div>
                         </div>
                     </div>
                     <!-- Tarjeta 2 -->
-                    <div class="tarjeta" onclick="location.href='#';">
+                    <div class="tarjeta" onclick="redirectToinformacionpromo2()">
                         <div class="row">
                             <div class="col-img">
                                 <img th:src="@{/images/vallesagradopromo.jpg}" alt="Imagen del paquete">
                             </div>
                             <div class="col-content">
                                 <h3>FULL DAY VALLE SAGRADO </h3>
-                                <p>¿Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado....</p>
+                                <p>Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado....</p>
                                 <div class="costo">
                                     <p > Por :s/82.14</p>
                                 </div>
-                                <button>Ver más</button>
+                                <button  onclick="redirectToinformacionpromo2()">Ver más</button>
                             </div>
                         </div>
                     </div>
                     <!-- Tarjeta 3 -->
-                    <div class="tarjeta" onclick="location.href='#';">
+                    <div class="tarjeta" onclick="redirectToinformacionpromo3()">
                         <div class="row">
                             <div class="col-img">
                                 <img th:src="@{/images/7colorespromo.jpg}" alt="Imagen del paquete">
@@ -70,7 +71,7 @@
                                 <div class="costo">
                                     <p > Por :s/224.03</p>
                                 </div>
-                                <button>Ver más</button>
+                                <button  onclick="redirectToinformacionpromo3()">Ver más</button>
                             </div>
                         </div>
                     </div>
