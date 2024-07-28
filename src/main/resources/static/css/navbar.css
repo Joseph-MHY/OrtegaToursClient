@@ -14,8 +14,9 @@
     font-size: 1.2em; /* Tamaño del texto */
 }
 
-/* Estilos para el resto de la barra de navegación (como ya definiste anteriormente) */
-.navbar {
+/* Estilos para el resto de la barra de navegación */
+.navbar,
+.navbar-reduced {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,7 +25,6 @@
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Estilos para el espaciador */
 .spacer {
@@ -48,10 +48,12 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    font-size: 1.2em; /* Aumentar el tamaño del texto */
 }
 
 .nav-links a:hover {
-    color: #dbd830; /* Tonalidad de amarillo  */
+    color: #dbd830; /* Tonalidad de amarillo */
+    cursor: pointer; /* Cambiar el cursor a mano */
 }
 
 /* Estilos para la información de contacto */
@@ -60,16 +62,14 @@
     text-align: right;
     font-size: 0.9em;
     margin-left: 20px;
-    margin-right: 20px;/* Ajusta el margen derecho para separar del borde */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde */
 }
-
-
 
 /* Estilos para el botón de login */
 .login-button {
     margin-left: 20px;
     font-size: 20px;
-    margin-right:20px
+    margin-right: 20px;
 }
 
 .login-button a {
@@ -82,23 +82,99 @@
     color: #dbd830; /* Tonalidad de amarillo */
 }
 
+/* Estilos para el botón de menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* Botón de cerrar menú */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.dropdown-menu ul li {
+    margin: 20px 0;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #dbd830; /* Tonalidad de amarillo */
+    cursor: pointer; /* Cambiar el cursor a mano */
+}
+
+/* Estilos para la información de contacto dentro del menú desplegable */
+.dropdown-menu .contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
 /* Adaptabilidad a dispositivos móviles */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        display: none;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 20px;
+    .navbar-reduced {
+        display: flex;
     }
 
-    .contact-info {
-        text-align: left;
+    .menu-toggle {
+        display: block;
+        font-size: 2em; /* Aumenta el tamaño del icono del menú */
     }
 
-    .login-button {
-        align-self: flex-end;
+    .login-button a {
+        font-size: 2em; /* Aumenta el tamaño del icono de login */
+    }
+
+    .logo {
+        display: none; /* Oculta el logo cuando la barra está reducida */
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-reduced {
+        display: none;
     }
 }
