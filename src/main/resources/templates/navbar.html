@@ -2,45 +2,112 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <title>Navbar Responsive</title>
     <!-- Ruta Thymeleaf -->
     <link rel="stylesheet" th:href="@{/css/navbar.css}">
-
 </head>
 <body>
-<div th:fragment="navbar">
-    <nav class="navbar">
-        <!-- Logo de la empresa -->
-        <div class="logo">
-            <img th:src="@{/images/Logoot2.png}" alt="Logo Empresa">
-            <span>Ortega Gonzales SRL.</span>
-        </div>
+<!-- Navbar normal -->
+<nav class="navbar" id="navbar">
+    <!-- Logo de la empresa -->
+    <div class="logo">
+        <img th:src="@{/images/Logoot2.png}" alt="Logo Empresa">
+        <span>Ortega Gonzales SRL.</span>
+    </div>
 
-        <!-- Espacio entre logo y enlaces -->
-        <div class="spacer"></div>
+    <!-- Espacio entre logo y enlaces -->
+    <div class="spacer"></div>
 
-        <!-- Enlaces de navegación -->
-        <ul class="nav-links">
-            <li><a onclick="redirectToprincipal()">Tours</a></li>
-            <li><a onclick="redirectTopromociones()" >Promociones</a></li>
-            <li><a onclick="redirectToquiensomos()" >Quienes Somos</a></li>
-        </ul>
+    <!-- Enlaces de navegación -->
+    <ul class="nav-links">
+        <li><a onclick="redirectToprincipal()">Tours</a></li>
+        <li><a onclick="redirectTopromociones()">Promociones</a></li>
+        <li><a onclick="redirectToquiensomos()">Quienes Somos</a></li>
+    </ul>
 
-        <!-- Información de contacto -->
-        <div class="contact-info">
-            <p>Contactenos: 971-782-252 / 944-215-390</p>
-            <p>Correo: OrtegaGonzales@gmail.com</p>
-        </div>
+    <!-- Información de contacto -->
+    <div class="contact-info">
+        <p>Contactenos: 971-782-252 / 944-215-390</p>
+        <p>Correo: OrtegaGonzales@gmail.com</p>
+    </div>
 
-        <!-- Botón de Login -->
-        <div class="login-button">
-            <a href="/login">
-                <ion-icon name="person-circle-outline"></ion-icon>
-            </a>
-        </div>
-    </nav>
+    <!-- Botón de Login -->
+    <div class="login-button">
+        <a href="/login">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+    </div>
+</nav>
+
+<!-- Navbar reducido -->
+<nav class="navbar-reduced" id="navbar-reduced">
+    <!-- Botón de menú para pantallas pequeñas -->
+    <div class="menu-toggle" id="menu-toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+    </div>
+
+    <!-- Botón de Login -->
+    <div class="login-button">
+        <a href="/login">
+            <ion-icon name="person-circle-outline"></ion-icon>
+        </a>
+    </div>
+</nav>
+
+<!-- Menú desplegable -->
+<div class="dropdown-menu" id="dropdown-menu">
+    <!-- Botón de cerrar menú -->
+    <div class="close-menu" id="close-menu">
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <ul>
+        <li><a onclick="redirectToprincipal()">Tours</a></li>
+        <li><a onclick="redirectTopromociones()">Promociones</a></li>
+        <li><a onclick="redirectToquiensomos()">Quienes Somos</a></li>
+    </ul>
+    <div class="contact-info">
+        <p>Contactenos: 971-782-252 / 944-215-390</p>
+        <p>Correo: OrtegaGonzales@gmail.com</p>
+    </div>
 </div>
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script th:src="@{/js/navbar.js}"></script>
+<script>
+    // JavaScript para manejar el botón de menú
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var dropdownMenu = document.getElementById('dropdown-menu');
+        dropdownMenu.classList.toggle('active');
+    });
+
+    // JavaScript para manejar el botón de cerrar menú
+    document.getElementById('close-menu').addEventListener('click', function() {
+        var dropdownMenu = document.getElementById('dropdown-menu');
+        dropdownMenu.classList.remove('active');
+    });
+
+    // JavaScript para alternar entre barras de navegación
+    window.addEventListener('resize', function() {
+        var navbar = document.getElementById('navbar');
+        var navbarReduced = document.getElementById('navbar-reduced');
+        if (window.innerWidth < 768) {
+            navbar.style.display = 'none';
+            navbarReduced.style.display = 'flex';
+        } else {
+            navbar.style.display = 'flex';
+            navbarReduced.style.display = 'none';
+        }
+    });
+
+    // Inicializar el estado de las barras de navegación
+    if (window.innerWidth < 768) {
+        document.getElementById('navbar').style.display = 'none';
+        document.getElementById('navbar-reduced').style.display = 'flex';
+    } else {
+        document.getElementById('navbar').style.display = 'flex';
+        document.getElementById('navbar-reduced').style.display = 'none';
+    }
+</script>
 </body>
 </html>
