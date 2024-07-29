@@ -21,11 +21,22 @@ body {
     flex-direction: column;
 }
 
-.banner h2 {
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%; /* Ajusta el ancho del cuadro transparente */
+    margin: 0 auto; /* Centra el cuadro horizontalmente */
+}
+
+.banner-content h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
 }
+
 
 .Informacion {
     display: flex;

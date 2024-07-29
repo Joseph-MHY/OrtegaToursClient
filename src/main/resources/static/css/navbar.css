@@ -24,6 +24,8 @@
     padding: 1px;
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* o absolute si es necesario */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
 }
 
 /* Estilos para el espaciador */
@@ -36,6 +38,7 @@
     list-style: none;
     display: flex;
     gap: 20px;
+
     cursor: pointer; /* Hacer que el cursor se convierta en una mano */
 }
 
@@ -50,11 +53,11 @@
     transition: color 0.3s;
     font-size: 1.2em; /* Aumentar el tamaño del texto */
 }
-
 .nav-links a:hover {
     color: #dbd830; /* Tonalidad de amarillo */
     cursor: pointer; /* Cambiar el cursor a mano */
 }
+
 
 /* Estilos para la información de contacto */
 .contact-info {
@@ -74,7 +77,7 @@
 
 .login-button a {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.8em;
     transition: color 0.3s;
 }
 
