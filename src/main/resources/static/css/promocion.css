@@ -1,12 +1,10 @@
-/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
 }
 
-/* Estilos para el banner */
 .banner {
     position: relative;
     text-align: center;
@@ -21,171 +19,190 @@ body {
     flex-direction: column;
 }
 
-.banner h2 {
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.banner-content h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner p {
-    font-size: 1.2em;
-    max-width: 80%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos para el botón "Ver más" */
-.tarjeta button {
-    display: block;
-    padding: 10px 20px;
-    margin-top: 10px; /* Ajuste de margen para el botón */
-    background-color: #C7522C;
     color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    font-size: 1.1em;
-    width: 150px; /* Ancho ajustado */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom:20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: inherit;
 }
 
-.tarjeta button:hover {
-    background-color: #A04327;
-}
-
-/* Estilos para la sección de Promociones */
 .promos {
     background-color: #DFDFDF;
     padding: 20px;
 }
 
-.promos .titulo {
+.promos .titulo h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 25px;
+    margin-bottom: 40px;
+    font-size: 50px;
     color: #C7522C;
-    font-family: 'Georgia', serif;
+    font-family: inherit;
 }
 
 .promos .contenido {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .promos .tarjetas {
     display: flex;
-    gap: 20px; /* Espacio entre las tarjetas */
-    overflow-x: auto;
-    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
-    padding-bottom: 10px; /* Espacio inferior para evitar el recorte */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-/* Estilos para las tarjetas de promociones */
 .tarjeta {
+    position: relative;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 540px;
-    flex: 0 0 auto; /* Asegura que las tarjetas no se reduzcan */
-    display: flex;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    height: 250px; /* Altura fija para las tarjetas */
-    overflow: hidden; /* Evita desbordamientos */
-    margin-top: 20px;
-    margin-left: 50px;
-    padding-right:25px
-}
-
-.tarjeta:hover {
-    background-color: #AFAFAF;
-}
-
-.row {
-    display: flex;
-    height: 100%; /* Asegura que las columnas ocupen toda la altura de la tarjeta */
-}
-
-.col-img {
-    flex: 0 0 50%;
-    max-width: 50%;
-    height: 100%; /* Asegura que la imagen ocupe toda la altura de la tarjeta */
-}
-
-.col-content {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding-left: 15px;
-    padding-top:15px;
-    padding-bottom:20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 520px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: left;
+    overflow: hidden;
 }
 
 .tarjeta img {
     width: 100%;
-    height: 100%; /* La imagen ocupa toda la altura de la tarjeta */
-    object-fit: cover; /* Asegura que la imagen cubra completamente el área sin deformarse */
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta .tag {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    font-family: inherit;
 }
 
 .tarjeta h3 {
     margin-bottom: 10px;
-    font-size: 1.25em;
-    color: #C7522C;
-    font-family: 'Georgia', serif;
+    font-size: 1.4em;
+    color: #25b21e;
+    font-family: inherit;
+    font-weight: bold;
 }
 
 .tarjeta p {
-    font-size: 1em;
-    margin-bottom: 1px; /* Espacio reducido entre párrafos */
-    font-family: 'Georgia', serif;
+    font-size: 1.1em;
     text-align: justify;
-
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: black;
+    font-family: inherit;
 }
 
-
-
-/* Estilos para las imágenes de promociones */
-.promos .imagenes {
-    width: 35%; /* Ancho reducido */
-    margin-top: 20px;
+.tarjeta .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 10px 5px;
 }
 
-.promos .imagen {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
+.tarjeta .price .time {
+    color: #6c757d;
+    font-size: 1.0em;
+    font-family: inherit;
 }
 
-.promos .imagen img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+.tarjeta .price .amount {
+    color: #C7522C;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: inherit;
 }
 
-.promos .imagen a {
+.tarjeta .overlay {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    z-index: 1;
-    text-indent: -9999px;
-}
-
-/* Estilos para el costo */
-.costo {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s;
     display: flex;
-    justify-content: space-between; /* Alineación a la derecha */
-    color:  #C7522C; /* Color de texto */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.costo p {
-    font-size: 22px; /* Tamaño de fuente ajustado */
+.tarjeta:hover .overlay {
+    opacity: 1;
+}
+
+.tarjeta .overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Ajuste la posición del título para que comience más arriba */
+    color: #dbd830;
+}
+
+.tarjeta .overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify; /* Justificar el texto */
+      color: white;
+ }
+
+
+.tarjeta .overlay .message {
+    font-size: 1.2em;
+    color: #dbd830;
+}
+
+@media (max-width: 768px) {
+    .promos .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-content h2 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+        max-width: 90%;
+    }
 }

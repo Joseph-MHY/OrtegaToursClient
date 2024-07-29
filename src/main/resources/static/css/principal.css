@@ -1,36 +1,107 @@
+/* Estilos básicos del cuerpo */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Estilos para el banner */
-.banner {
+/* Estilos del carrusel */
+.carousel {
     position: relative;
-    text-align: center;
-    color: white;
-    background-image: url('/images/imagencusco.png');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%; /* Asegura que el carrusel no exceda el contenedor */
+    background-color: #DFDFDF;
 }
 
-.banner h2 {
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block; /* Asegura que la imagen se ajuste al contenedor */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que los botones estén por encima del contenido */
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    color: black; /* Color del ícono */
+}
+
+.carousel-control-prev-icon::before {
+    content: '←'; /* Flecha izquierda */
+}
+
+.carousel-control-next-icon::before {
+    content: '→'; /* Flecha derecha */
+}
+
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.banner-content h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: inherit;
 }
 
-.banner p {
+.banner-content p {
     font-size: 1.2em;
-    max-width: 80%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-family: inherit;
 }
 
-/* Estilos para el botón "Ver paquete" */
 .banner-button {
     display: inline-block;
     padding: 10px 20px;
@@ -43,24 +114,26 @@ body {
     transition: background-color 0.3s;
     text-decoration: none;
     font-size: 1.1em;
+    font-family: inherit;
 }
 
 .banner-button:hover {
     background-color: #addfad;
 }
 
-/* Estilos para la sección de Destinos de Turismo */
+
+
 .destinos {
     background-color: #DFDFDF;
     padding: 20px;
 }
 
-.destinos .titulo {
+.destinos .titulo h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 50px;
     color: #C7522C;
-    font-family: 'Georgia', serif;
+    font-family: inherit;
 }
 
 .destinos .contenido {
@@ -68,117 +141,153 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px; /* Ajusta el gap entre las secciones */
-    padding-left: 60px; /* Añade padding a la izquierda */
-    padding-right: 60px; /* Añade padding a la derecha */
+    gap: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .destinos .tarjetas {
     display: flex;
     flex-wrap: wrap;
-    gap: 90px;
+    gap: 30px;
     justify-content: center;
 }
 
-/* Estilos tarjeta */
 .tarjeta {
-    background-color: #AFAFAF;
+    position: relative;
+    background-color: white;
     padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    height: 440px;
-    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 520px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-}
-
-.tarjeta:hover {
-    background-color: white;
+    transition: transform 0.3s;
+    text-align: left;
+    overflow: hidden;
 }
 
 .tarjeta img {
     width: 100%;
-    height: 60%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta .tag {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    font-family: inherit;
 }
 
 .tarjeta h3 {
     margin-bottom: 10px;
-    text-align: center;
-    font-size: 15px;
-    color: #C7522C;
-    font-family: 'Georgia', serif;
+    font-size: 1.4em;
+    color: #25b21e;
+    font-family: inherit;
     font-weight: bold;
 }
 
 .tarjeta p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     text-align: justify;
     margin-bottom: 10px;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
     margin-left: 5px;
     margin-right: 5px;
-    color: #21618C;
+    color: black;
+    font-family: inherit;
 }
 
-/* Estilos para las imágenes sección */
-.destinos .imagenes {
+.tarjeta .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 10px 5px;
+}
+
+.tarjeta .price .time {
+    color: #6c757d;
+    font-size: 1.0em;
+    font-family: inherit;
+}
+
+.tarjeta .price .amount {
+    color: #C7522C;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.tarjeta .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Ajusta el gap entre las imágenes */
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.destinos .imagenes .imagen {
-    position: relative;
+.tarjeta:hover .overlay {
+    opacity: 1;
 }
 
-.destinos .imagenes img {
-    width: 350px;
-    height: 220px;
-    border-radius: 10px;
-    object-fit: cover;
+.tarjeta .overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Ajuste la posición del título para que comience más arriba */
+    color: #dbd830;
 }
 
-.destinos .imagenes a {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: #4BB609;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: background-color 0.3s;
+.tarjeta .overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify; /* Justificar el texto */
+      color: white;
+ }
+
+
+.tarjeta .overlay span {
+    font-size: 1.2em;
+    color: #dbd830;
 }
 
-.destinos .imagenes a:hover {
-    background-color: #addfad;
-}
-
-/* Media queries para la responsividad */
+/* Media queries */
 @media (max-width: 768px) {
     .destinos .contenido {
         flex-direction: column;
         align-items: center;
     }
 
-    .banner h2 {
+    .banner-content h2 {
         font-size: 2em;
     }
 
-    .banner p {
+    .banner-content p {
         font-size: 1em;
         max-width: 90%;
     }
-
 }
-
-
-
