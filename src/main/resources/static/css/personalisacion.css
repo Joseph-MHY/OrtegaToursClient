@@ -1,196 +1,99 @@
-body {
-    margin: 0;
-    padding: 0;
+/* Estilos para la ventana modal */
+.personalizacion {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Estilos para el banner */
-.banner {
-    position: relative;
-    text-align: center;
-    color: white;
-    background-image: url('/images/banner02.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+.personalizacion-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    position: relative;
 }
 
-.banner h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner p {
-    font-size: 1.2em;
-    max-width: 80%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos para la sección de reservas */
-.reservas {
-    background-color: #DFDFDF;
-    padding: 20px;
-}
-
-.reservas .titulo {
+.modal-header h2 {
+    margin: 0;
     text-align: center;
-    margin-bottom: 40px;
+    width: 100%;
 }
 
-.titulo h2 {
-    color: #C7522C; /* Cambia el color del texto según tu preferencia */
-    font-family: 'Georgia', serif; /* Puedes ajustar el tipo de fuente si es necesario */
-    font-size:  40px; /* Ajusta el tamaño del texto según tu diseño */
-    text-align: center; /* Alinea el texto al centro si lo deseas */
+.close {
+    position: absolute;
+    right: 20px;
 }
 
-.reservas .contenido {
-    display: flex;
-    justify-content: center; /* Cambiado para centrar la tarjeta */
-    align-items: flex-start;
-}
-
-.Tarjeta_Formulario {
-    background-color: #f0f0f0;
-    padding: 20px 80px;
-    border-radius: 8px;
-    text-align: left; /* Alinear el texto a la izquierda dentro de la tarjeta */
-    margin: auto;
-    max-width: 600px;
-}
-
-.Tarjeta_Formulario h3 {
-    text-align: center;
-    color: #C7522C;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.Tarjeta_Formulario label {
-    display: block; /* Asegura que cada label esté en una línea nueva */
+.modal-body {
     margin-top: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
     margin-bottom: 5px;
-    color: #50169A;
-    font-family: 'Georgia', serif;
-    font-size: 20px;
+    font-weight: bold;
 }
 
-.Tarjeta_Formulario input,
-.Tarjeta_Formulario select {
-    width: calc(100% - 10px); /* Ancho total menos el margen izquierdo y derecho */
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #DFDFDF;
-}
-
-.Tarjeta_Formulario button {
-    margin-top: 20px;
+.form-group input, .form-group select {
+    width: 100%;
     padding: 10px;
-    background-color: #4BB609;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #058419;
     color: white;
     border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 50%;
-    margin-left: 25%; /* Ajusta el margen izquierdo para centrar el botón */
-}
-
-.Tarjeta_Formulario button:hover {
-    background-color: #addfad;
-}
-
-/* Estilos para las imágenes seccion */
-.destinos .imagenes {
-    width: 45%;
-    margin-top: 20px;
-    float: right; /* Mueve la sección hacia la derecha */
-}
-
-.imagen {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.imagen img {
-    width: 100%;
-    height: 200px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
-    border-radius: 8px;
-}
-
-.imagen .texto {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 8px;
     border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.imagen a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    text-indent: -9999px;
-}
-
-
-/* Estilos para el banner adicional */
-.banner-adicional {
-    background-color: #DFDFDF;
-    padding: 20px;
-    text-align: center; /* Centra el contenido */
-}
-
-.banner-adicional h3 {
-    margin-bottom: 10px;
-    font-size: 30px;
-    color: #C7522C;  /* Cambia el color del texto según tu preferencia */
-    font-family: 'Georgia', serif; /* Puedes ajustar el tipo de fuente si es necesario */
-}
-
-.ventajas,
-.solicitudes {
-    display: inline-block;
-    width: 45%; /* Ajusta el ancho según tu diseño */
-    vertical-align: top;
-    text-align: left; /* Alinear el texto a la izquierda */
-}
-
-.ventajas ul,
-.solicitudes ul {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-top: 10px;
-    font-size: 15px;
-    color: #50169A; /* Cambia el color del texto según tu preferencia */
-    font-family: 'Georgia', serif; /* Puedes ajustar el tipo de fuente si es necesario */
-}
-
-.ventajas p,
-.solicitudes p {
-    font-weight: bold;
-    font-size: 25px;
-    color: black;
-    font-family: 'Georgia', serif;
-}
-
-.ventajas ion-icon, .solicitudes ion-icon {
-    color: #38c172; /* Color verde para el icono */
-    margin-right: 10px;
-    font-size: 20px; /* Tamaño del icono */
+button[type="submit"]:hover {
+    background-color: #333;
 }
