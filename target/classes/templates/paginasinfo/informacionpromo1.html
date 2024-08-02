@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/Infomacion.css}">
+    <link rel="stylesheet" th:href="@{/css/personalisacion.css}">
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Ofrecemos más que un viaje, una experiencia inolvidable.</h2>
+        </div>
+    </div>
+
+    <section class="Informacion">
+        <div class="paquete-info">
+            <h3 class="titulo">City Tour Cusco + 04 Ruinas</h3>
+            <p class="descripcion">City Tour Cusco – 04 Ruinas es uno de los más solicitados por todo aquel viajero visitante que desea recorrer las majestuosas construcciones incas de nuestro antiguo Perú. El City Tour hacia las 4 Ruinas Cusco te llenará de historia y misticismo. Sean Bienvenidos al City Tour Cusco y la excursión por sus 4 Ruinas Cusco</p>
+
+            <h4 class="subtitulo">ITINERARIO:</h4>
+            <p class="descripcion">13:30PM Recojo en el hotel para iniciar Excursión City Tour Cusco: Recorrido turístico por la ciudad, visitaremos: El Koricancha o templo del Sol, La Catedral, continuando nuestro recorrido por las cuatro ruinas aledañas a la ciudad: Sacsayhuaman, Qenko, Pukapukara y Tambomachay. Retorno a Cusco.</p>
+            <p class="detalle-itinerario">Salida desde Cuzco a las 9:00 a.m. con traslado desde tu hotel hacia la estación de tren. Abordarás un cómodo tren para viajar hacia Machu Picchu, donde disfrutarás de una visita guiada completa. Nuestro guía experto, en inglés y español, te acompañará desde el inicio del recorrido para compartir contigo la historia y los secretos de este fascinante sitio arqueológico.</p>
+            <p class="detalle-itinerario">Explora las diversas estructuras y terrazas de Machu Picchu durante el tour guiado, con tiempo libre para seguir explorando por tu cuenta después de la visita guiada.</p>
+            <p class="detalle-itinerario">Regreso a Cuzco en tren por la tarde y traslado de vuelta a tu hotel.</p>
+
+            <h4 class="subtitulo">Incluye:</h4>
+            <ul class="incluye">
+                <li>Traslados en unidad turística</li>
+                <li>Recojo en el hotel</li>
+                <li>Guía profesional en servicio Pool en inglés o español</li>
+                <li>Asistencia permanente</li>
+            </ul>
+
+            <h4 class="subtitulo">Precio Por Persona:</h4>
+            <ul class="condiciones">
+                <li>s/119.48 soles  (No incluye boleto turístico)</li>
+            </ul>
+        </div>
+
+        <div class="seccion_derecha">
+            <div class="tarjeta-empresa-info">
+                <h3 class="info-titulo">Contáctenos</h3>
+                <p class="info-sub-titulo">Teléfonos</p>
+                <div class="telefono">
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 954 964 304</p>
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 920 470 208</p>
+                </div>
+                <p class="info-sub-titulo">Email</p>
+                <p class="email"><ion-icon name="mail-outline" class="icono-rojo"></ion-icon> reservas@kortegagonzales.com</p>
+                <p class="info-sub-titulo">Oficinas de Operaciones:</p>
+                <p class="direccion">AV. PACHACUTEQ NRO. 307 DPTO. 202 (FT PERU RAIL 2DO PISO, PTA CL ROJO), Cusco - Cusco - WANCHAQ</p>
+                <p class="disponibilidad">Disponible de lunes a domingo</p>
+            </div>
+            <div class="tarjeta-tarifa">
+                <h4 class="textprecio">Tarifa:</h4>
+                <p class="precio">S/119.48 soles</p>
+                <p class="nota">(Cupones limitados)</p>
+                <button class="reservar-btn">Reservar</button> <!-- Botón para abrir la ventana modal -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<!-- Incluir el fragmento de la ventana modal -->
+<div th:replace="personalisacion"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+<script th:src="@{/js/personalisacion.js}"></script>
+</body>
+</html>

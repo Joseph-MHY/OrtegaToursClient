@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/promocion.css}"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Promociones</h2>
+        </div>
+    </div>
+
+    <!-- Sección de Destinos de Turismo -->
+    <section class="promos">
+        <div class="titulo">
+            <h2>PROMOCIONES OFRECIDAS</h2>
+        </div>
+        <div class="contenido">
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta" onclick="redirectToinformacionpromo1()">
+                <div class="tag">PROMOCION</div>
+                <img src="/images/tours_4ruinas.jpg" alt="Imagen del paquete">
+                <h3>City Tour Cusco + 04 Ruinas</h3>
+                <p>City Tour Cusco + 04 Ruinas El City Tour Cusco – 04 Ruinas es uno de los más solicitados por todo aquel viajero visitante...</p>
+                <div class="price">
+                    <span class="time"><i class="fas fa-clock"></i> Full Day</span>
+                    <span class="amount">Desde S/119.48</span>
+                </div>
+                <div class="overlay">
+                    <h3>City Tour Cusco + 04 Ruinas</h3>
+                    <p>City Tour Cusco + 04 Ruinas El City Tour Cusco – 04 Ruinas es uno de los más solicitados por todo aquel viajero visitante...</p>
+                    <div class="message">Embarcate En Tu Aventura con Ortega Tours</div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta" onclick="redirectToinformacionpromo2()">
+                <div class="tag">PROMOCION</div>
+                <img src="/images/vallesagradopromo.jpg" alt="Imagen del paquete">
+                <h3>FULL DAY VALLE SAGRADO</h3>
+                <p>Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado....</p>
+                <div class="price">
+                    <span class="time"><i class="fas fa-clock"></i> Full Day</span>
+                    <span class="amount">Desde S/82.14</span>
+                </div>
+                <div class="overlay">
+                    <h3>FULL DAY VALLE SAGRADO</h3>
+                    <p>Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado....</p>
+                    <div class="message">Embarcate En Tu Aventura con Ortega Tours</div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta" onclick="redirectToinformacionpromo3()">
+                <div class="tag">PROMOCION</div>
+                <img src="/images/7colorespromo.jpg" alt="Imagen del paquete">
+                <h3>FULL DAY MONTAÑA DE 7 COLORES</h3>
+                <p>Pasamos a recogerlos por el hotel a las 3 am, nos dirigimos al sur de la ciudad de Cuzco, tiempo de viaje 2 horas y 45 minutos...</p>
+                <div class="price">
+                    <span class="time"><i class="fas fa-clock"></i> Full Day</span>
+                    <span class="amount">Desde S/224.03</span>
+                </div>
+                <div class="overlay">
+                    <h3>FULL DAY MONTAÑA DE 7 COLORES</h3>
+                    <p>Pasamos a recogerlos por el hotel a las 3 am, nos dirigimos al sur de la ciudad de Cuzco, tiempo de viaje 2 horas y 45 minutos...</p>
+                    <div class="message">Embarcate En Tu Aventura con Ortega Tours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/promocion.js}"></script>
+</body>
+</html>

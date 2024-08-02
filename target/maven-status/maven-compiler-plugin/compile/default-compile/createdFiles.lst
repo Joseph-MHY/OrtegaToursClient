@@ -1,0 +1,15 @@
+com\ortega\client\models\entity\CategoriaPaquete.class
+com\ortega\client\models\entity\Rol.class
+com\ortega\client\models\entity\Tipodocumento.class
+com\ortega\client\models\entity\Paquetes.class
+com\ortega\client\models\entity\Nacionalidades.class
+com\ortega\client\models\entity\Tipocontrato.class
+com\ortega\client\models\entity\Reservas.class
+com\ortega\client\controller\PageController.class
+com\ortega\client\models\entity\Clientes.class
+com\ortega\client\models\entity\Empleados.class
+com\ortega\client\models\entity\Transacciones.class
+com\ortega\client\ClientApplication.class
+com\ortega\client\models\entity\Pasajeros.class
+com\ortega\client\models\entity\CostosTours.class
+com\ortega\client\models\entity\Estado.class

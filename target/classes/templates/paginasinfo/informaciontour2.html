@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/Infomacion.css}">
+    <link rel="stylesheet" th:href="@{/css/personalisacion.css}">
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Ofrecemos más que un viaje, una experiencia inolvidable.</h2>
+        </div>
+    </div>
+
+    <section class="Informacion">
+        <div class="paquete-info">
+            <h3 class="titulo">Tour Laguna Humantay 1 día</h3>
+            <p class="descripcion"> La Laguna Lumantay de 1 día o full day, esta pensando en los amantes de la naturaleza , encontraran espectaculares paisajes como la laguna de Humantay y el nevado de Salkantay.</p>
+
+            <h4 class="subtitulo">Incluye:</h4>
+            <ul class="itinerario">
+                <li>Transporte hacia Soraypampa</li>
+                <li>Transporte desde Soraypampa.</li>
+                <li>Bastón de caminata.</li>
+                <li>Botiquín de primeros auxilios y oxígeno.</li>
+                <li>Botella de Agua y Snack.</li>
+                <li>Guía Español e ingles</li>
+                <li>Almuerzo Semi Buffet</li>
+            </ul>
+
+            <h4 class="subtitulo">Itinerario:</h4>
+            <p class="detalle-itinerario">Recojo de su hotel a las 5:00 am.
+                Nuestro transporte nos llevara hasta el poblado de Mollepata por un tiempo de 2 horas donde tendremos un desayuno semi bufett para luego continuar por 2 horas más al punto de inicio de nuestra caminata (Soraypampa 3800 m. / 12467ft).</p>
+            <p class="detalle-itinerario">Antes de empezar la caminata le daremos  bastones y snack y comenzaremos con nuestra caminata. El tiempo es un aproximado de 1hora y ½, llegando a la Laguna de Humantay donde
+                tendremos una vista panorámica de la Laguna, el Nevado y un guiado.</p>
+            <p class="detalle-itinerario">Luego tendremos que bajar hasta el punto de partida (Soraypampa) y nuestro transporte nos retornara hasta el poblado de Mollepata donde los esperaremos con el almuerzo semi buffet y luego retornar a la ciudad de Cusco.</p>
+            <p class="detalle-itinerario">Llegando aproximadamente a la ciudad 7pm.</p>
+
+
+            <h4 class="subtitulo">¿Qué llevar?</h4>
+            <ul class="condiciones">
+                <li class="detalle-itinerario">Ropa cómoda para caminar: Se sugiere llevar ropa cómoda y resistente para la caminata, como pantalones largos, camisetas de manga larga y sudaderas. Se recomienda evitar el uso de ropa ajustada o de tela sintética.</li>
+                <li class="detalle-itinerario">Calzado adecuado: Se debe llevar calzado resistente y cómodo para caminar, como zapatos de trekking o zapatillas con suela antideslizante.</li>
+                <li class="detalle-itinerario">Abrigo para la altitud: En la zona de la Laguna Humantay la temperatura puede ser fría, especialmente en la mañana y en la noche, por lo que se sugiere llevar una chaqueta o abrigo abrigado.</li>
+                <li class="detalle-itinerario">Bloqueador solar y sombrero: La altitud y la exposición al sol pueden causar quemaduras solares, por lo que se recomienda llevar bloqueador solar y sombrero para proteger la piel y la cabeza.</li>
+                <li class="detalle-itinerario">Cámara: La Laguna Humantay ofrece paisajes impresionantes, por lo que se recomienda llevar una cámara para capturar los momentos inolvidables.</li>
+            </ul>
+        </div>
+
+        <div class="seccion_derecha">
+            <div class="tarjeta-empresa-info">
+                <h3 class="info-titulo">Contáctenos</h3>
+                <p class="info-sub-titulo">Teléfonos</p>
+                <div class="telefono">
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 954 964 304</p>
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 920 470 208</p>
+                </div>
+                <p class="info-sub-titulo">Email</p>
+                <p class="email"><ion-icon name="mail-outline" class="icono-rojo"></ion-icon> reservas@kortegagonzales.com</p>
+                <p class="info-sub-titulo">Oficinas de Operaciones:</p>
+                <p class="direccion">AV. PACHACUTEQ NRO. 307 DPTO. 202 (FT PERU RAIL 2DO PISO, PTA CL ROJO), Cusco - Cusco - WANCHAQ</p>
+                <p class="disponibilidad">Disponible de lunes a domingo</p>
+            </div>
+            <div class="tarjeta-tarifa">
+                <h4 class="textprecio">Tarifa:</h4>
+                <p class="precio">S/129.97 soles</p>
+                <p class="nota">(Reserva ya!!)</p>
+                <button class="reservar-btn" >Reservar</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Fragmento del footer -->
+<div th:replace="footer"></div>
+
+<!-- Incluir el fragmento de la ventana modal -->
+<div th:replace="personalisacion"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+<script th:src="@{/js/personalisacion.js}"></script>
+</body>
+</html>

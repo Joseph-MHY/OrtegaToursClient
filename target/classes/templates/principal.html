@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" th:href="@{/css/principal.css}"> <!-- Enlace al archivo CSS -->
+
+</head>
+<body>
+<!-- fragmento de la barra de navegación -->
+<div th:replace="navbar"></div>
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="carousel" id="bannerCarousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" th:src="@{/images/banner03.jpg}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" th:src="@{/images/imagencusco.png}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" th:src="@{/images/banner02.jpg}" alt="Third slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev">&lt;</button>
+        <button class="carousel-control-next">&gt;</button>
+
+        <div class="banner-content">
+            <h2>Descubre Cuzco en un Full Day</h2>
+            <p>Explora Cuzco y sus maravillas en un solo día. Vive su historia y cultura con nuestro tour completo. ¡Reserva tu aventura con Ortega Tours!</p>
+            <a onclick="redirectToinformaciontour3()" class="banner-button">Ver paquete</a>
+        </div>
+    </div>
+    <!-- Sección de Destinos de Turismo -->
+    <section class="destinos">
+        <div class="titulo">
+            <h2>DESTINOS DE TURISMO</h2>
+        </div>
+        <div class="contenido">
+            <!-- Parte izquierda con tarjetas de paquetes -->
+            <div class="tarjetas">
+                <!-- Tarjeta 1 -->
+                <div class="tarjeta" onclick="redirectToinformaciontour1()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours0.jpg}" alt="Imagen del paquete">
+                    <h3>CUSCO/Montaña de 7 colores</h3>
+                    <p>Con este paquete de 6 días usted disfrutara de una perspectiva más amplia de las costumbres y tradiciones del pasado...</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> 06 DÍAS</span>
+                        <span class="amount">Desde S/1,596.84</span>
+                    </div>
+                    <div class="overlay">
+                        <h3>CUSCO/Montaña de 7 colores</h3>
+                        <p>Con este paquete de 6 días usted disfrutara de una perspectiva más amplia de las costumbres y tradiciones del pasado...</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="tarjeta" onclick="redirectToinformaciontour2()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours001.jpg}" alt="Imagen del paquete">
+                    <h3>Tour Laguna Humantay 1 día</h3>
+                    <p>La Laguna Lumantay de 1 día o full day, esta pensando en los amantes de la naturaleza , encontraran espectaculares paisajes..</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> Full Day</span>
+                        <span class="amount">Desde S/129.97 </span>
+                    </div>
+                    <div class="overlay">
+                        <h3>Tour Laguna Humantay 1 día</h3>
+                        <p>La Laguna Lumantay de 1 día o full day, esta pensando en los amantes de la naturaleza , encontraran espectaculares paisajes..</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="tarjeta" onclick="redirectToinformaciontour3()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours002.jpg}" alt="Imagen del paquete">
+                    <h3>Experiencia CUSCO City Tour</h3>
+                    <p>En este programa visitaremos los iconos más representativos de la cultura Inca que rodean la ciudad del Cusco....</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> Full Day</span>
+                        <span class="amount">Desde S/115.00 </span>
+                    </div>
+                    <div class="overlay">
+                        <h3>Experiencia CUSCO City Tour</h3>
+                        <p>En este programa visitaremos los iconos más representativos de la cultura Inca que rodean la ciudad del Cusco....</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="tarjeta" onclick="redirectToinformaciontours4()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours003.jpg}" alt="Imagen del paquete">
+                    <h3>CUSCO 04 DÍAS Y 03 NOCHES</h3>
+                    <p>Cusco 04 Días Y 03 Noches | City Tour + Machu Picchu + Valle Sagrado + Hotel Bienvenidos al Paquete Turístico Cusco 4 días....</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> 04 DÍAS</span>
+                        <span class="amount">Desde S/1,593.12</span>
+                    </div>
+                    <div class="overlay">
+                        <h3>CUSCO 04 DÍAS Y 03 NOCHES</h3>
+                        <p>Cusco 04 Días Y 03 Noches | City Tour + Machu Picchu + Valle Sagrado + Hotel Bienvenidos al Paquete Turístico Cusco 4 días....</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+                <!-- Tarjeta 5 -->
+                <div class="tarjeta" onclick="redirectToinformaciontour5()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours004.jpg}" alt="Imagen del paquete">
+                    <h3>CUSCO 05 DÍAS Y 04 NOCHES</h3>
+                    <p>Cusco 05 Días Y 04 Noches | City Tour + Machu Picchu + Valle Sagrado + Valle Sur + Hotel Bienvenidos al Paquete Turístico...</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> 05 DÍAS</span>
+                        <span class="amount">Desde S/2,101.88</span>
+                    </div>
+                    <div class="overlay">
+                        <h3>CUSCO 05 DÍAS Y 04 NOCHES</h3>
+                        <p>Cusco 05 Días Y 04 Noches | City Tour + Machu Picchu + Valle Sagrado + Valle Sur + Hotel Bienvenidos al Paquete Turístico...</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+                <!-- Tarjeta 6 -->
+                <div class="tarjeta" onclick="redirectToinformaciontour6()">
+                    <div class="tag">TOURS</div>
+                    <img th:src="@{/images/tours005.jpg}" alt="Imagen del paquete">
+                    <h3>CUSCO 06 DIAS Y 05 NOCHES</h3>
+                    <p>Cusco 06 Días Y 05 Noches | City Tour + Machu Picchu + Valle Sagrado + Maras Moray + Valle Sur + Hotel ¡Bienvenidos a una...</p>
+                    <div class="price">
+                        <span class="time"><i class="fas fa-clock"></i> 06 Días</span>
+                        <span class="amount">Desde S/2,317.27</span>
+                    </div>
+                    <div class="overlay">
+                        <h3>CUSCO 06 DIAS Y 05 NOCHES</h3>
+                        <p>Cusco 06 Días Y 05 Noches | City Tour + Machu Picchu + Valle Sagrado + Maras Moray + Valle Sur + Hotel ¡Bienvenidos a una...</p>
+                        <span class="message">Haz clic para más información</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!--  fragmento del footer -->
+<div th:replace="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script th:src="@{/js/principal.js}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const prevButton = document.querySelector('.carousel-control-prev');
+        const nextButton = document.querySelector('.carousel-control-next');
+        const inner = document.querySelector('.carousel-inner');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const offset = -index * 100;
+            inner.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        });
+
+        // Initialize the carousel
+        showSlide(currentIndex);
+    });
+</script>
+</body>
+</html>
