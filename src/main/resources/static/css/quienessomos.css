@@ -71,7 +71,7 @@ body {
 .info-content h3 {
     text-align: left;
     color: #25b21e;
-    font-size: 1.9em;
+    font-size: 1.4rem;
     margin-bottom: 20px;
 }
 
@@ -79,7 +79,7 @@ body {
     color: #0d0830;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-size: 1.4em;
+    font-size: 1.3rem;
     text-align:justify;
 }
 
@@ -101,13 +101,13 @@ body {
 }
 
 .card h3 {
-    font-size: 1.8em;
+    font-size: 1.4rem;
     margin-bottom: 15px;
     color: #25b21e;
 }
 
 .card p {
-    font-size: 1.4em;
+    font-size: 1.3rem;
     color: #0d0830;
     line-height: 1.6;
 }

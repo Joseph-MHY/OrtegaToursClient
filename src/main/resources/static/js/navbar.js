@@ -14,10 +14,5 @@ function redirectToquiensomos() {
     window.location.href = '/user/quiensomos';  // Esta URL debe coincidir con la ruta definida en tu controlador
 }
 
-document.getElementById('login').addEventListener('click', (event) => {
-    event.preventDefault();
-    window.open('https://ortegatoursadmin.onrender.com/login', '_blank');
-});
-
 
 

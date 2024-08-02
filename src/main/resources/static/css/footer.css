@@ -4,6 +4,7 @@
     color: white;
     padding: 30px;
     font-family: 'Arial', sans-serif;
+    font-size: 13px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; /* Permite que las secciones se ajusten en filas */

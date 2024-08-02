@@ -2,6 +2,7 @@
 .logo {
     display: flex;
     margin-left: 20px;
+    font-size: 12px;
     align-items: center;
 }
 
@@ -12,7 +13,7 @@
 
 .logo span {
     color: white; /* Color del texto */
-    font-size: 1.2em; /* Tamaño del texto */
+    font-size: 1.4em; /* Tamaño del texto */
 }
 
 /* Estilos para el resto de la barra de navegación */
@@ -154,7 +155,7 @@
 }
 
 /* Adaptabilidad a dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 1198px) {
     .navbar {
         display: none;
     }
@@ -165,11 +166,9 @@
 
     .menu-toggle {
         display: block;
+        margin-top: 10px;
+        margin-left: 15px;
         font-size: 2em; /* Aumenta el tamaño del icono del menú */
-    }
-
-    .login-button a {
-        font-size: 2em; /* Aumenta el tamaño del icono de login */
     }
 
     .logo {
@@ -177,7 +176,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1198px) {
     .navbar-reduced {
         display: none;
     }
