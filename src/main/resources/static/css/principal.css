@@ -1,16 +1,14 @@
-/* Estilos básicos del cuerpo */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* Estilos del carrusel */
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 100%; /* Asegura que el carrusel no exceda el contenedor */
+    max-width: 100%;
     background-color: #DFDFDF;
 }
 
@@ -28,7 +26,7 @@ body {
 .carousel img {
     width: 100%;
     height: auto;
-    display: block; /* Asegura que la imagen se ajuste al contenedor */
+    display: block;
 }
 
 .carousel-control-prev,
@@ -36,12 +34,12 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    border: none;
-    padding: 10px;
+    border-radius: 25px;
+    padding: 15px; /* Aumentar el tamaño del padding */
     cursor: pointer;
-    z-index: 1000; /* Asegura que los botones estén por encima del contenido */
+    z-index: 1000;
 }
 
 .carousel-control-prev {
@@ -56,34 +54,30 @@ body {
 .carousel-control-next-icon {
     background: white;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 70px; /* Aumentar el tamaño del contenedor del icono */
+    height: 70px; /* Aumentar el tamaño del contenedor del icono */
     display: inline-block;
     text-align: center;
-    line-height: 30px;
-    font-size: 18px;
-    color: black; /* Color del ícono */
+    line-height: 50px; /* Aumentar el line-height para centrar el icono verticalmente */
+    font-size: 50px; /* Aumentar el tamaño de la fuente del icono */
+    color: black;
 }
 
 .carousel-control-prev-icon::before {
-    content: '←'; /* Flecha izquierda */
+    content: '←';
 }
 
 .carousel-control-next-icon::before {
-    content: '→'; /* Flecha derecha */
+    content: '→';
 }
-
-
 .banner-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    width: 50%;
+    width: 90%;
+    padding: 10px; /* Añade padding para evitar que el contenido toque los bordes */
 }
 
 .banner-content h2 {
@@ -94,19 +88,11 @@ body {
     font-family: inherit;
 }
 
-.banner-content p {
-    font-size: 1.2em;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-    font-family: inherit;
-}
-
 .banner-button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #4BB609;
+    background-color: #3a6f84;
     color: white;
     border: none;
     border-radius: 25px;
@@ -121,18 +107,16 @@ body {
     background-color: #addfad;
 }
 
-
-
 .destinos {
-    background-color: #DFDFDF;
+    background-color: #d6d6d6;
     padding: 20px;
 }
 
 .destinos .titulo h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 50px;
-    color: #C7522C;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #3a6f84;
     font-family: inherit;
 }
 
@@ -159,8 +143,8 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    width: 350px; /* Reducido de 400px */
-    height: 480px; /* Reducido de 520px */
+    width: 350px;
+    height: 480px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -172,7 +156,7 @@ body {
 
 .tarjeta img {
     width: 100%;
-    height: 250px; /* Reducido de 300px */
+    height: 250px;
     border-radius: 10px;
     margin-bottom: 15px;
     object-fit: cover;
@@ -197,7 +181,7 @@ body {
 .tarjeta h3 {
     margin-bottom: 10px;
     font-size: 1.4em;
-    color: #25b21e;
+    color: #3a6f84;
     font-family: inherit;
     font-weight: bold;
 }
@@ -227,7 +211,7 @@ body {
 }
 
 .tarjeta .price .amount {
-    color: #C7522C;
+    color: #cc0000;
     font-size: 1.6em;
     font-weight: bold;
     font-family: inherit;
@@ -254,24 +238,32 @@ body {
 .tarjeta:hover .overlay {
     opacity: 1;
 }
+.tarjeta .overlay-logo img {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+}
+
 
 .tarjeta .overlay h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    margin-top: 20px; /* Ajuste la posición del título para que comience más arriba */
+    margin-top: 20px;
     color: #dbd830;
 }
 
 .tarjeta .overlay p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-align: justify; /* Justificar el texto */
+    text-align: justify;
     color: white;
 }
+
 
 .tarjeta .overlay span {
     font-size: 1.2em;
     color: #dbd830;
+    margin-top: auto;
 }
 
 /* Media queries */
@@ -281,21 +273,27 @@ body {
         align-items: center;
     }
 
-    .banner-content h2 {
-        font-size: 2em;
+    .banner-content {
+        padding: 5px; /* Reducir padding en pantallas más pequeñas */
     }
 
-    .banner-content p {
-        font-size: 1em;
-        max-width: 90%;
+    .banner-content h2 {
+        font-size: 1.5em; /* Reducir tamaño de la fuente en pantallas más pequeñas */
+        margin-bottom: 5px;
+    }
+
+    .banner-button {
+        font-size: 0.9em; /* Reducir tamaño de la fuente del botón en pantallas más pequeñas */
+        padding: 8px 15px; /* Ajustar padding del botón */
+        margin-top: 10px;
     }
 
     .tarjeta {
-        width: 90%; /* Adaptar el tamaño de la tarjeta en pantallas más pequeñas */
-        height: auto; /* Ajustar la altura automáticamente en pantallas más pequeñas */
+        width: 90%;
+        height: auto;
     }
 
     .tarjeta img {
-        height: 200px; /* Ajustar la altura de la imagen en pantallas más pequeñas */
+        height: 200px;
     }
 }

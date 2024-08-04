@@ -7,56 +7,33 @@
 <body>
 <div th:fragment="footer">
     <footer class="footer">
-        <div class="footer-left">
-            <h3>Redes de la Empresa:</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/jhon.titosalcedo.1"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="https://wa.me/987412793"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                <a href="https://www.instagram.com/titosalcedojhon"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-            </div>
-            <div class="contact-info">
-                <h4>Contacto:</h4>
-                <p>Correo: OrtegaGonzales2024@gmail.com</p>
-                <p><ion-icon name="logo-whatsapp" class="icono"></ion-icon>+51 971 782 252</p>
-                <p><ion-icon name="logo-whatsapp" class="icono"></ion-icon>+51 944 215 390</p>
-                <p>Dirección: AV. PACHACUTEQ NRO. 307 DPTO. 202 (FT PERU RAIL 2DO PISO, PTA CL ROJO), Cusco - Cusco - WANCHAQ</p>
-            </div>
-        </div>
-        <div class="footer-center">
-            <h3>Servicios:</h3>
-            <ul>
-                <li>Paquetes Turísticos</li>
-                <li>Full Day</li>
-                <li>City Tour</li>
-                <li>Paquetes Escolares</li>
-                <li>Días Festivos para viajar</li>
+        <div class="footer-section">
+            <h3 class="titulo">Nuestras Redes</h3>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/jhon.titosalcedo.1"><ion-icon name="logo-facebook"></ion-icon> </a></li>
+                <li><a href="https://wa.me/987412793"><ion-icon name="logo-whatsapp"></ion-icon> </a></li>
+                <li><a href="https://www.instagram.com/titosalcedojhon"><ion-icon name="logo-instagram"></ion-icon> </a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon> </a></li>
             </ul>
-            <p>RUC: 20527613010</p>
-            <p>EMPRESA DE TRANSPORTES TURISTICOS ORTEGA GONZALES SOCIEDAD DE RESPONSABILIDAD LIMITADA</p>
         </div>
-        <div class="footer-right">
-            <h3>Contacto:</h3>
-            <form id="contactForm" action="/contact/send" method="post" onsubmit="return submitForm(event)">
-                <label for="fullname">Nombres y Apellidos:</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Nombres y Apellidos" required>
 
-                <label for="email">Correo:</label>
-                <input type="email" id="email" name="email" placeholder="Correo" required>
-
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="6" placeholder="Mensaje" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
+        <div class="footer-section">
+            <h3 class="titulo">Contáctanos</h3>
+            <ul class="dato-icons">
+                <li><ion-icon name="location-outline"></ion-icon> AV. Pachacuteq Nro. 307 Dpto. 202 (FT Perú Rail 2DO Piso, PTA CL Rojo), Cusco - WANCHAQ</li>
+                <li><ion-icon name="logo-whatsapp"></ion-icon> +51 971 782 252</li>
+                <li><ion-icon name="logo-whatsapp"></ion-icon> +51 944 215 390</li>
+                <li><ion-icon name="mail-outline"></ion-icon> OrtegaGonzales2024@gmail.com</li>
+            </ul>
         </div>
+        <div class="footer-section">
+            <img th:src="@{/images/colibriv3.png}" alt="logo">
+        </div>
+
     </footer>
 </div>
 <div class="marca">
-    @Ortega Tours Perú 2024
+    @Ortega Gonzales Perú 2024
 </div>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

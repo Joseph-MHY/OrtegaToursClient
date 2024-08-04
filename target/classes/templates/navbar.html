@@ -11,7 +11,7 @@
 <nav class="navbar" id="navbar">
     <!-- Logo de la empresa -->
     <div class="logo">
-        <img th:src="@{/images/Logoot2.png}" alt="Logo Empresa">
+        <img th:src="@{/images/colibri.png}" alt="Logo Empresa">
         <span>Ortega Gonzales SRL.</span>
     </div>
 
@@ -46,6 +46,12 @@
     <div class="close-menu" id="close-menu">
         <ion-icon name="close-outline"></ion-icon>
     </div>
+
+    <!-- Logo centrado en el menú desplegable -->
+    <div class="dropdown-logo">
+        <img th:src="@{/images/colibriv3.png}" alt="Logo Empresa">
+    </div>
+
     <ul>
         <li><a onclick="redirectToprincipal()">Tours</a></li>
         <li><a onclick="redirectTopromociones()">Promociones</a></li>
@@ -94,6 +100,15 @@
         document.getElementById('navbar').style.display = 'flex';
         document.getElementById('navbar-reduced').style.display = 'none';
     }
+
+        window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) { // Puedes ajustar el valor según tus necesidades
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 </script>
 </body>
 </html>
