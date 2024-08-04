@@ -22,12 +22,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4BB609; /* Tonalidad de verde */
+    background-color: #3a6f84;
     padding: 1px;
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* o absolute si es necesario */
+    position: sticky; /* Hacer que la navbar sea pegajosa */
+    top: 0; /* Pegada en la parte superior */
     z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+.navbar {
+    background-color: #3a6f84; /* Color inicial */
+    transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+    background-color: rgba(58, 111, 132, 0.9); /* Color con transparencia */
 }
 
 /* Estilos para el espaciador */
@@ -37,10 +46,10 @@
 
 /* Estilos para los enlaces de navegación */
 .nav-links {
+    margin-right:20px;
     list-style: none;
     display: flex;
     gap: 20px;
-
     cursor: pointer; /* Hacer que el cursor se convierta en una mano */
 }
 
@@ -60,9 +69,9 @@
     cursor: pointer; /* Cambiar el cursor a mano */
 }
 
-
 /* Estilos para la información de contacto */
 .contact-info {
+    display: none; /* Ocultar en la vista principal */
     color: white;
     text-align: right;
     font-size: 0.9em;
@@ -122,6 +131,19 @@
     color: white;
 }
 
+/* Logo centrado en el menú desplegable */
+.dropdown-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-logo img {
+    height: 90px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Menú desplegable activo */
 .dropdown-menu.active {
     display: flex;
 }
@@ -150,34 +172,29 @@
 
 /* Estilos para la información de contacto dentro del menú desplegable */
 .dropdown-menu .contact-info {
-    margin-top: 20px;
+    display: block; /* Mostrar en el menú desplegable */
     text-align: center;
+    font-size: 1em;
 }
 
-/* Adaptabilidad a dispositivos móviles */
-@media (max-width: 1198px) {
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
     .navbar {
         display: none;
     }
 
     .navbar-reduced {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
     }
 
     .menu-toggle {
         display: block;
-        margin-top: 10px;
-        margin-left: 15px;
-        font-size: 2em; /* Aumenta el tamaño del icono del menú */
     }
 
-    .logo {
-        display: none; /* Oculta el logo cuando la barra está reducida */
-    }
-}
-
-@media (min-width: 1198px) {
-    .navbar-reduced {
+    .contact-info {
         display: none;
     }
 }
