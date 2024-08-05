@@ -13,7 +13,7 @@
 
 .personalizacion-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto; /* Ajusta el margen superior para que aparezca más arriba */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -83,15 +83,15 @@
 
 button[type="submit"] {
     display: block;
-    width: 100%;
+    width: 50%; /* Ajusta el ancho del botón */
     padding: 15px;
-    background-color: #058419;
+    background-color: #3a6f84;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px auto 0; /* Centra el botón horizontalmente */
 }
 
 button[type="submit"]:hover {

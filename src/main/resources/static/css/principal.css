@@ -81,7 +81,7 @@ body {
 }
 
 .banner-content h2 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 10px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -239,9 +239,9 @@ body {
     opacity: 1;
 }
 .tarjeta .overlay-logo img {
-    width: 90px; /* Ajusta el tamaño según sea necesario */
+    width: 90px;
     height: auto;
-    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+    margin-bottom: 10px;
 }
 
 

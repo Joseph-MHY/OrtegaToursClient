@@ -9,7 +9,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    background-image: url('/images/imagencusco.png');
+    background-image: url('/images/bannerig.png');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -19,7 +19,6 @@ body {
 }
 
 .banner-content {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -28,17 +27,10 @@ body {
 }
 
 .banner-content h2 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 10px;
     color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-}
-
-.banner-content p {
-    font-size: 1.2em;
-    color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-    margin-top: 10px;
 }
 
 /* Estilos para la nueva sección */
@@ -64,23 +56,23 @@ body {
 
 .info-content {
     flex: 2;
-    padding: 20px;
-    text-align:justify;
+    padding: 10px;
+    text-align: justify;
 }
 
 .info-content h3 {
     text-align: left;
-    color: #25b21e;
+    color: #3a6f84;
     font-size: 1.4rem;
     margin-bottom: 20px;
 }
 
 .info-content p {
     color: #0d0830;
-    line-height: 1.6;
+    line-height: 1.6em;
     margin-bottom: 20px;
-    font-size: 1.3rem;
-    text-align:justify;
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
 /* Estilos para las tarjetas de Visión y Misión */
@@ -101,26 +93,27 @@ body {
 }
 
 .card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #25b21e;
+    color: #3a6f84;
 }
 
 .card p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #0d0830;
     line-height: 1.6;
 }
 
 .porque-nosotros-section {
-    padding: 2rem;
-    background-color:  #DFDFDF;
+    padding: 1.5rem;
+    background-color: #DFDFDF;
     text-align: center;
 }
 
 .porque-nosotros-section h3 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 1.3rem;
+    font-size: 3rem;
+     color:  #0d0830;
 }
 
 .porque-nosotros-columns {
@@ -150,19 +143,61 @@ body {
     color: #C7522C;
 }
 
-.item ion-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
 .item h4 {
     margin-bottom: 0.5rem;
-    font-size: 1.7rem;
-     color: #25b21e;
+    font-size: 1.2rem;
+    color: #3a6f84;
 }
 
 .item p {
     margin: 0;
-    font-size: 1.4rem;
-     color:  #0d0830;
+    font-size: 1.2rem;
+    color:  #0d0830;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+    }
+    .info-image {
+        display: none;
+    }
+    .cards-section {
+        flex-direction: column;
+        align-items: center; /* Centrar las tarjetas horizontalmente */
+        padding: 10px; /* Añadir padding alrededor de la sección */
+    }
+    .card {
+        width: 90%; /* Reducir el ancho para añadir espacio a los lados */
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+    }
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+    .porque-nosotros-columns {
+        flex-direction: column;
+        padding: 10px; /* Añadir padding alrededor de la sección */
+    }
+    .porque-nosotros-section h3 {
+        font-size: 1.5rem;
+    }
+    .item {
+        padding: 0.5rem;
+        margin-bottom: 10px; /* Añadir margen inferior para separar los elementos */
+    }
+    .item ion-icon {
+        font-size: 2.5rem;
+    }
+    .item h4 {
+        font-size: 1.1rem;
+    }
+    .item p {
+        font-size: 0.8rem;
+    }
 }
