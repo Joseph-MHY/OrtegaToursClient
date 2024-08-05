@@ -45,8 +45,8 @@ body {
 .promos .titulo h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 40px;
-    color: #3a6f84;
+    font-size: 35px;
+    color: black;
     font-family: inherit;
 }
 
@@ -70,12 +70,10 @@ body {
 .tarjeta {
     position: relative;
     background-color: white;
-    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     width: 350px;
-    height: 480px;
-    margin-bottom: 40px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -88,7 +86,7 @@ body {
     width: 100%;
     height: 250px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     object-fit: cover;
 }
 
@@ -97,7 +95,7 @@ body {
 }
 
 .tarjeta .tag {
-    background-color: red;
+    background-color: #9e0909;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
@@ -109,42 +107,46 @@ body {
 }
 
 .tarjeta h3 {
-    margin-bottom: 10px;
-    font-size: 1.4em;
-    color: #3a6f84;
+    margin-bottom: 2px;
+    font-size: 1.1em;
+    color: black;
     font-family: inherit;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .tarjeta p {
-    font-size: 1.1em;
+    font-size: 0.8em;
     text-align: justify;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: black;
     font-family: inherit;
 }
 
 .tarjeta .price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding: 10px 5px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: auto;
+     padding: 8px 5px;
+     margin-left: 10px;
 }
 
 .tarjeta .price .time {
-    color: #6c757d;
-    font-size: 1.0em;
-    font-family: inherit;
+     color: #6c757d;
+     font-size: 1.0em;
+     font-family: inherit;
 }
 
 .tarjeta .price .amount {
     color: #cc0000;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: bold;
     font-family: inherit;
+    margin-right: 10px;
 }
 
 .tarjeta .overlay {
@@ -153,7 +155,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
     transition: opacity 0.3s;
     display: flex;
@@ -173,7 +175,7 @@ body {
     font-size: 1.5em;
     margin-bottom: 10px;
     margin-top: 20px;
-    color: #dbd830;
+    color: #7dcea0;
 }
 
 .tarjeta .overlay p {
@@ -191,7 +193,7 @@ body {
 
 .tarjeta .overlay .message {
     font-size: 1.2em;
-    color: #dbd830;
+    color: #7dcea0;
     margin-top: auto;
 }
 

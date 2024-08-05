@@ -30,8 +30,9 @@ body {
 .footer-section img {
     display: block; /* Convertir la imagen en un bloque para centrarla */
     margin: 0 auto; /* Centrar la imagen horizontalmente */
-    width: 100%;
-    max-width: 250px;
+    width: 80%;
+    margin-top:40px;
+    max-width: 200px;
 }
 
 .dato-icons {
@@ -72,7 +73,7 @@ body {
 
 /* Cambiar el color del icono al pasar el cursor sobre él */
 .social-icons a:hover {
-    color: #ffcc00; /* Color de resaltado (ajustar según la red social) */
+    color: white; /* Color de resaltado (ajustar según la red social) */
     transform: scale(1.2); /* Agrandar el ícono ligeramente al pasar el cursor */
 }
 
