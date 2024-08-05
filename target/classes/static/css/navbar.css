@@ -1,4 +1,7 @@
-/* Estilos para el logo */
+body {
+  background-color: #9a9a9a;
+}
+
 .logo {
     display: flex;
     margin-left: 20px;
@@ -22,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #3a6f84;
+    background-color: rgba(58, 111, 132, 0.6);
     padding: 1px;
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -32,11 +35,11 @@
 }
 
 .navbar {
-    background-color: #3a6f84; /* Color inicial */
+    background-color: rgba(58, 111, 132, 0.6);
     transition: background-color 0.3s ease;
 }
 .navbar.scrolled {
-    background-color: rgba(58, 111, 132, 0.9); /* Color con transparencia */
+    background-color: rgba(58, 111, 132, 0.6); /* Color con transparencia */
 }
 
 /* Estilos para el espaciador */
