@@ -11,7 +11,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    background-image: url('/images/imagencusco.png');
+    background-image: url('/images/machupicchu2.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -22,7 +22,6 @@ body {
 }
 
 .banner-content {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -31,7 +30,7 @@ body {
 }
 
 .banner-content h2 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 10px;
     color: white; /* Asegúrate de que el texto sea legible sobre el fondo */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
@@ -40,12 +39,10 @@ body {
 .Informacion {
     display: flex;
     justify-content: space-between;
-    padding-top: 80px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
     background-color: #DFDFDF;
     font-size: 12px;
+
 }
 
 .paquete-info {
@@ -53,14 +50,14 @@ body {
     padding-right: 20px;
     margin-left: 30px;
     margin-right: 30px;
-    text-align:justify;
+    text-align: justify;
 }
 
 .paquete-info .titulo {
     font-size: 1.9em;
-    color: #25b21e;
+    color: #3a6f84;
     font-weight: bold;
-    margin-top:0;
+    margin-top: 0;
 }
 
 .paquete-info .descripcion {
@@ -72,7 +69,7 @@ body {
 
 .paquete-info .subtitulo {
     font-size: 1.6em;
-    color: #25b21e;
+    color: #3a6f84;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -153,16 +150,19 @@ body {
     align-items: center;
     justify-content: center;
     color: #21618C;
+    font-size: 1.2em;
 }
 
 .email {
     text-align: center;
     color: #21618C;
+     font-size: 1.2em;
 }
 
 .direccion {
     text-align: center;
     text-align: justify;
+     font-size: 1.2em;
     color: #21618C;
 }
 
@@ -173,24 +173,24 @@ body {
 
 .tarjeta-tarifa .textprecio {
     font-size: 1.5em;
-    color: #C7522C;
+    color: #3a6f84;
 }
 
 .tarjeta-tarifa .precio {
-    font-size: 1.8em;
-    color: #0514AD;
-    font-weight: bold;
-    text-align: center;
-}
-
-.nota {
+    font-size: 1.9em;
     color: red;
     font-weight: bold;
     text-align: center;
 }
 
+.nota {
+    color: #3a6f84;
+    font-weight: bold;
+    text-align: center;
+}
+
 .reservar-btn {
-    background-color: #058419;
+    background-color: #3a6f84;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -212,9 +212,31 @@ body {
     color: #e74c3c; /* Color rojo para el icono de correo */
 }
 
-/* Media Query para ocultar .seccion_derecha en pantallas pequeñas */
-@media (max-width: 768px) {
+/* Media Query para pantallas pequeñas */
+@media (max-width: 1115px) {
+    .banner-content h2 {
+        font-size: 1.9em;
+    }
+    .Informacion {
+        flex-direction: column; /* Cambia a columna los elementos */
+        padding: 20px;
+    }
+
+    .paquete-info {
+        width: 100%;
+        margin: 0 0 20px 0; /* Ajusta márgenes en pantallas pequeñas */
+    }
+
     .seccion_derecha {
-        display: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .tarjeta-empresa-info,
+    .tarjeta-tarifa {
+        width: 50%; /* Ajusta el ancho de las tarjetas */
+        margin: 10px 0; /* Espaciado vertical entre las tarjetas */
     }
 }
