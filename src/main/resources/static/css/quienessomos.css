@@ -9,7 +9,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    background-image: url('/images/banner02.jpg');
+    background-image: url('/images/banner02.webp');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -75,7 +75,7 @@ body {
 
 .info-content h3 {
     text-align: left;
-    color: #3a6f84;
+    color:  #00000;
     font-size: 1.4rem;
     margin-bottom: 20px;
 }
@@ -108,7 +108,7 @@ body {
 .card h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #3a6f84;
+    color:  #00000;
 }
 
 .card p {
@@ -126,7 +126,7 @@ body {
 .porque-nosotros-section h3 {
     margin-bottom: 1.3rem;
     font-size: 3rem;
-     color:  #0d0830;
+     color:  #00000;
 }
 
 .porque-nosotros-columns {
