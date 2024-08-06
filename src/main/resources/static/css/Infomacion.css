@@ -11,7 +11,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    background-image: url('/images/machupicchu2.jpg');
+    background-image: url('/images/machupicchu2.webp');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -55,7 +55,7 @@ body {
 
 .paquete-info .titulo {
     font-size: 1.9em;
-    color: #3a6f84;
+    color:  #00000;
     font-weight: bold;
     margin-top: 0;
 }
@@ -69,7 +69,7 @@ body {
 
 .paquete-info .subtitulo {
     font-size: 1.6em;
-    color: #3a6f84;
+    color: #00000;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: bold;
