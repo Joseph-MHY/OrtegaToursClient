@@ -1,3 +1,21 @@
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-center",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "60",
+    "timeOut": "3500",
+    "extendedTimeOut": "3500",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+};
+
 // Función para validar el formato del correo electrónico
 function validateEmail(email) {
     // Expresión regular para validar el formato del correo electrónico
@@ -41,45 +59,6 @@ window.onclick = function(event) {
     }
 }
 
-// Validar el formulario al hacer clic en el botón de reservar
-document.querySelector('.reservar-btn').addEventListener('click', function() {
-    var form = document.getElementById('reservaForm');
-    var celularInput = document.getElementById('celular');
-    var correoInput = document.getElementById('correo');
-
-    var celular = celularInput.value;
-    var correo = correoInput.value;
-
-    // Validar que todos los campos estén completos
-    var inputs = form.querySelectorAll('input[required], select[required]');
-    var isValid = true;
-
-    for (var input of inputs) {
-        if (!input.value.trim()) {
-            isValid = false; // Detener el proceso si hay campos vacíos
-            break;
-        }
-    }
-
-    // Validar celular
-    if (!/^\d{9}$/.test(celular)) {
-        isValid = false; // Detener el proceso si el celular es inválido
-    }
-
-    // Validar correo
-    if (!validateEmail(correo)) {
-        isValid = false; // Detener el proceso si el correo es inválido
-    }
-
-    if (!isValid) {
-        // Si alguna validación falla, no se envía el formulario
-        return; // Detener el proceso
-    }
-
-    // Si todas las validaciones son correctas, abrir el modal
-    abrirModal();
-});
-
 // Añadir evento para validar el celular al cambiar su valor
 var celularInput = document.getElementById('celular');
 if (celularInput) {
@@ -90,3 +69,66 @@ if (celularInput) {
 
 // Añadir evento de clic al botón de reservar
 document.querySelector('.reservar-btn').addEventListener('click', abrirModal);
+
+document.getElementById('documento').addEventListener('input', function (event) {
+    let value = event.target.value;
+    // Eliminar cualquier carácter que no sea un dígito
+    event.target.value = value.replace(/\D/g, '');
+});
+
+document.getElementById('contacto_reserva').addEventListener('click', function() {
+    var celularInput = document.getElementById('celular');
+    var correoInput = document.getElementById('correo');
+    var celular = celularInput.value.trim();
+    var correo = correoInput.value.trim();
+
+    // Obtener datos del formulario y aplicar trim()
+    var destino = document.getElementById('destino').value.trim();
+    var nombres = document.getElementById('nombres').value.trim();
+    var apellidos = document.getElementById('apellidos').value.trim();
+    var numDocumento = document.getElementById('documento').value.trim();
+    var fechaPartida = document.getElementById('fecha').value.trim();
+    var tipoViaje = document.getElementById('tipoViaje').value.trim();
+
+    // Validar los campos
+    if (!validateEmail(correo)) {
+        toastr.warning('Correo electrónico inválido.');
+        return;
+    }
+    if (celular.length < 7) {
+        toastr.warning('Número de celular inválido.');
+        return;
+    }
+    if (!destino || !nombres || !apellidos || !numDocumento || !fechaPartida || !tipoViaje) {
+        toastr.warning('Todos los campos son obligatorios.');
+        return;
+    }
+
+    // Crear objeto JSON
+    var data = {
+        destino: destino,
+        nombres: nombres,
+        apellidos: apellidos,
+        correo: correo,
+        celular: celular,
+        numDocumento: numDocumento,
+        fechaPartida: fechaPartida,
+        tipoViaje: tipoViaje
+    };
+
+    // Enviar datos del formulario
+    axios.post('http://localhost:8080/user/guardar', data)
+        .then(response => {
+            toastr.success(response.data);
+
+            setTimeout(function() {
+                location.reload();
+            }, 3500);
+        })
+        .catch(error => {
+            toastr.error('Error al guardar la reserva.');
+            console.error(error);
+        });
+});
+
+

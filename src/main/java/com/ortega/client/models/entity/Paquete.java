@@ -12,14 +12,14 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "paquetes")
-public class Paquetes {
+public class Paquete {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('paquetes_id_paquete_seq'::regclass)")
     @Column(name = "id_paquete", nullable = false)
     private Integer id;
 
-    @Column(name = "nombre_paquete", nullable = false)
+    @Column(name = "nombre_paquete", nullable = false, length = Integer.MAX_VALUE)
     private String nombrePaquete;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -39,6 +39,6 @@ public class Paquetes {
     private String urlimagen;
 
     @OneToMany(mappedBy = "idPaquete")
-    private Set<Reservas> reservas = new LinkedHashSet<>();
+    private Set<Reserva> reservas = new LinkedHashSet<>();
 
 }

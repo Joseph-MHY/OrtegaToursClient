@@ -23,6 +23,6 @@ public class Estado {
     private String nombreEstado;
 
     @OneToMany(mappedBy = "idEstado")
-    private Set<Reservas> reservas = new LinkedHashSet<>();
+    private Set<Reserva> reservas = new LinkedHashSet<>();
 
 }

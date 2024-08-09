@@ -9,7 +9,7 @@ import org.hibernate.annotations.ColumnDefault;
 @Setter
 @Entity
 @Table(name = "pasajeros")
-public class Pasajeros {
+public class Pasajero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('pasajeros_idpasajero_seq'::regclass)")
@@ -18,7 +18,7 @@ public class Pasajeros {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_reserva", nullable = false)
-    private Reservas idReserva;
+    private Reserva idReserva;
 
     @Column(name = "nombres", nullable = false, length = 80)
     private String nombres;
@@ -37,6 +37,6 @@ public class Pasajeros {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_nacionalidad")
-    private Nacionalidades idNacionalidad;
+    private Nacionalidade idNacionalidad;
 
 }

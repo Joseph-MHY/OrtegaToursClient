@@ -81,7 +81,7 @@
     box-sizing: border-box;
 }
 
-button[type="submit"] {
+button[type="button"] {
     display: block;
     width: 50%; /* Ajusta el ancho del botón */
     padding: 15px;
@@ -94,6 +94,6 @@ button[type="submit"] {
     margin: 20px auto 0; /* Centra el botón horizontalmente */
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: #333;
 }

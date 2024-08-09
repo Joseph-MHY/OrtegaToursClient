@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "nacionalidades")
-public class Nacionalidades {
+public class Nacionalidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('nacionalidades_id_nacionalidad_seq'::regclass)")
@@ -23,6 +23,6 @@ public class Nacionalidades {
     private String nombreNacionalidad;
 
     @OneToMany(mappedBy = "idNacionalidad")
-    private Set<Pasajeros> pasajeros = new LinkedHashSet<>();
+    private Set<Pasajero> pasajeros = new LinkedHashSet<>();
 
 }

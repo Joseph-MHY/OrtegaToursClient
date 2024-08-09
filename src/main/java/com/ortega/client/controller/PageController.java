@@ -26,11 +26,6 @@ public class PageController {
     public String promociones() {
         return "promociones.html";
     }
-    // Página informacion
-    @GetMapping("/informacion")
-    public String informacion() {
-        return "paginasinfo/informacion.html";
-    }
 
     // Página informacion
     @GetMapping("/informacionpromo1")

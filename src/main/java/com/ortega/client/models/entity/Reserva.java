@@ -13,7 +13,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "reservas")
-public class Reservas {
+public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('reservas_id_reserva_seq'::regclass)")
@@ -22,7 +22,7 @@ public class Reservas {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_cliente")
-    private Clientes idCliente;
+    private Cliente idCliente;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "fecha_registro")
@@ -44,11 +44,11 @@ public class Reservas {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_paquete")
-    private Paquetes idPaquete;
+    private Paquete idPaquete;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_empleado")
-    private Empleados idEmpleado;
+    private Empleado idEmpleado;
 
     @Column(name = "costo_total")
     private Double costoTotal;
@@ -57,12 +57,12 @@ public class Reservas {
     private String notasAdicionales;
 
     @OneToMany(mappedBy = "idReserva")
-    private Set<CostosTours> costosTours = new LinkedHashSet<>();
+    private Set<CostosTour> costosTours = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "idReserva")
-    private Set<Pasajeros> pasajeros = new LinkedHashSet<>();
+    private Set<Pasajero> pasajeros = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "idReserva")
-    private Set<Transacciones> transacciones = new LinkedHashSet<>();
+    private Set<Transaccione> transacciones = new LinkedHashSet<>();
 
 }

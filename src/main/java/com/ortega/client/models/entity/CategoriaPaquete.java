@@ -23,6 +23,6 @@ public class CategoriaPaquete {
     private String nombreCategoria;
 
     @OneToMany(mappedBy = "idCategoriaPaquete")
-    private Set<Paquetes> paquetes = new LinkedHashSet<>();
+    private Set<Paquete> paquetes = new LinkedHashSet<>();
 
 }

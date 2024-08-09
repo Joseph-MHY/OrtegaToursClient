@@ -13,7 +13,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "empleados")
-public class Empleados {
+public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('empleados_id_empleado_seq'::regclass)")
@@ -77,6 +77,6 @@ public class Empleados {
     private Boolean estadoCuenta = false;
 
     @OneToMany(mappedBy = "idEmpleado")
-    private Set<Reservas> reservas = new LinkedHashSet<>();
+    private Set<Reserva> reservas = new LinkedHashSet<>();
 
 }

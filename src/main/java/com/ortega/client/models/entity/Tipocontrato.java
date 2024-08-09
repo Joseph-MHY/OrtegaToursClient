@@ -23,6 +23,6 @@ public class Tipocontrato {
     private String nombreContrato;
 
     @OneToMany(mappedBy = "idTipoContrato")
-    private Set<Empleados> empleados = new LinkedHashSet<>();
+    private Set<Empleado> empleados = new LinkedHashSet<>();
 
 }
