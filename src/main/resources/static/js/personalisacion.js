@@ -115,9 +115,10 @@ document.getElementById('contacto_reserva').addEventListener('click', function()
         fechaPartida: fechaPartida,
         tipoViaje: tipoViaje
     };
+    console.log(data)
 
     // Enviar datos del formulario
-    axios.post('http://localhost:8080/user/guardar', data)
+    axios.post('http://localhost:8090/user/guardar', data)
         .then(response => {
             toastr.success(response.data);
 

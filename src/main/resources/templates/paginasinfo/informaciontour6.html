@@ -14,7 +14,8 @@
 </head>
 <body>
 <!-- Fragmento de la barra de navegación -->
-<div th:replace="navbar"></div>
+<div th:replace="~{navbar}"></div>
+
 
 <main>
     <!-- Banner con imagen y texto superpuesto -->
@@ -168,7 +169,7 @@
 </div>
 
 <!-- Fragmento del footer -->
-<div th:replace="footer"></div>
+<div th:replace="~{footer}"></div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
