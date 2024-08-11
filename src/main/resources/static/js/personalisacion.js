@@ -51,6 +51,34 @@ if (closeBtn) {
     }
 }
 
+// Seleccionamos los elementos del DOM necesarios
+var tipDocSelect = document.getElementById('tipDoc');
+var documentoInput = document.getElementById('documento');
+
+// Función para ajustar el campo de documento según el tipo de documento seleccionado
+function adjustDocumentoInput() {
+    if (tipDocSelect.value === 'DNI') {
+        documentoInput.maxLength = 8;
+        documentoInput.pattern = "\\d{8}";
+        documentoInput.title = "Debe ingresar exactamente 8 dígitos para el DNI";
+    } else if (tipDocSelect.value === 'Pasaporte') {
+        documentoInput.maxLength = 20;
+        documentoInput.pattern = "\\d{1,20}";
+        documentoInput.title = "Debe ingresar un máximo de 20 dígitos para el Pasaporte";
+    }
+}
+
+// Asignar la función adjustDocumentoInput al evento change del select
+tipDocSelect.addEventListener('change', adjustDocumentoInput);
+
+// Ejecutar la función al cargar la página para aplicar la configuración inicial
+adjustDocumentoInput();
+
+// Validar que solo se ingresen números en el campo de documento
+documentoInput.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
+
 // Cerrar la ventana modal si se hace clic fuera del contenido de la modal
 window.onclick = function(event) {
     var modal = document.getElementById('personalizacion');
