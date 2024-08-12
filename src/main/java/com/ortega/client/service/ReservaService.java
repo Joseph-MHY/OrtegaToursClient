@@ -45,31 +45,16 @@ public class ReservaService {
         Paquete optionalPaquetes = iPaquete.findByNombrePaquete(reservaDTO.getDestino())
                 .orElseThrow(() -> new EntityNotFoundException("Paquete no encontrado"));
 
-        Optional<Cliente> optionalClienteDocument = Optional.ofNullable(iCliente.findByNumdocumento(
-                reservaDTO.getNumDocumento())
-        );
-        Optional<Cliente> optionalClienteCorreo = Optional.ofNullable(iCliente.findByCorreo(
-                reservaDTO.getCorreo())
-        );
+        Cliente cliente = new Cliente();
+        cliente.setNombres(reservaDTO.getNombres());
+        cliente.setApellidos(reservaDTO.getApellidos());
+        cliente.setCorreo(reservaDTO.getCorreo());
+        cliente.setCelular(reservaDTO.getCelular());
+        cliente.setNumdocumento(reservaDTO.getNumDocumento());
+        cliente = iCliente.save(cliente);
 
-        Cliente cliente;
 
-        if (optionalClienteDocument.isPresent()) {
-            cliente = optionalClienteDocument.get();
-        } else if (optionalClienteCorreo.isPresent()) {
-            cliente = optionalClienteCorreo.get();
-        } else {
-            // Cliente no encontrado, se crea uno nuevo
-            cliente = new Cliente();
-            cliente.setNombres(reservaDTO.getNombres());
-            cliente.setApellidos(reservaDTO.getApellidos());
-            cliente.setCorreo(reservaDTO.getCorreo());
-            cliente.setCelular(reservaDTO.getCelular());
-            cliente.setNumdocumento(reservaDTO.getNumDocumento());
-            cliente = iCliente.save(cliente);
-        }
-
-        Reserva reservas  = new Reserva();
+        Reserva reservas = new Reserva();
         reservas.setIdCliente(cliente);
         reservas.setIdPaquete(optionalPaquetes);
         reservas.setTipoViaje(reservaDTO.getTipoViaje());
