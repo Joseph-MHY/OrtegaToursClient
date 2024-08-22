@@ -1,0 +1,204 @@
+body {
+  background-color: #9a9a9a;
+}
+
+.logo {
+    display: flex;
+    margin-left: 20px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo según tu diseño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logo span {
+    color: white; /* Color del texto */
+    font-size: 1.5em; /* Tamaño del texto */
+    cursor: pointer;
+}
+
+/* Estilos para el resto de la barra de navegación */
+.navbar,
+.navbar-reduced {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(58, 111, 132, 0.6);
+    padding: 1px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Hacer que la navbar sea pegajosa */
+    top: 0; /* Pegada en la parte superior */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+.navbar {
+    background-color: rgba(58, 111, 132, 0.8);
+    transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+    background-color: rgba(58, 111, 132, 0.6); /* Color con transparencia */
+}
+
+/* Estilos para el espaciador */
+.spacer {
+    flex: 1;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links {
+    margin-right:20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    cursor: pointer; /* Hacer que el cursor se convierta en una mano */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2em; /* Aumentar el tamaño del texto */
+}
+.nav-links a:hover {
+    color: #48c9b0; /* Tonalidad de amarillo */
+    cursor: pointer; /* Cambiar el cursor a mano */
+}
+
+/* Estilos para la información de contacto */
+.contact-info {
+    display: none; /* Ocultar en la vista principal */
+    color: white;
+    text-align: right;
+    font-size: 0.9em;
+    margin-left: 20px;
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde */
+}
+
+/* Estilos para el botón de login */
+.login-button {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.login-button a {
+    color: white;
+    font-size: 1.8em;
+    transition: color 0.3s;
+}
+
+.login-button a:hover {
+    color: #dbd830; /* Tonalidad de amarillo */
+}
+
+/* Estilos para el botón de menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* Botón de cerrar menú */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Logo centrado en el menú desplegable */
+.dropdown-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-logo img {
+    height: 90px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Menú desplegable activo */
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.dropdown-menu ul li {
+    margin: 20px 0;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #dbd830; /* Tonalidad de amarillo */
+    cursor: pointer; /* Cambiar el cursor a mano */
+}
+
+/* Estilos para la información de contacto dentro del menú desplegable */
+.dropdown-menu .contact-info {
+    display: block; /* Mostrar en el menú desplegable */
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-reduced {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .contact-info {
+        display: none;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/Infomacion.css}">
+    <link rel="stylesheet" th:href="@{/css/personalisacion.css}">
+    <link rel="icon" type="image/png" href="/images/colibriv3.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="~{navbar}"></div>
+
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Ofrecemos más que un viaje, una experiencia inolvidable.</h2>
+        </div>
+    </div>
+
+    <section class="Informacion">
+        <div class="paquete-info">
+            <h3 class="titulo">Cusco + Machu Picchu + Montaña de 7 colores</h3>
+            <p class="descripcion">Con este paquete de 6 días usted disfrutara de una perspectiva más amplia de las costumbres y tradiciones del pasado y lo actual de Cusco, también podrá visitar los lugares arqueológicos extraordinarios de Cusco.</p>
+
+            <h4 class="subtitulo">Incluye:</h4>
+            <ul class="incluye">
+                <li>Traslados de ingreso y salida en Cusco.</li>
+                <li>Transporte y Guía en grupo a los lugares de visita.</li>
+                <li>Ingresos a los lugares de visita mencionados en el programa</li>
+                <li>Viaje a Machupicchu en tren expedition o turista, de clase económica. </li>
+                <li>04 noches en Cusco</li>
+                <li>01 noche en Aguas Calientes </li>
+                <li>01 almuerzo buffet en el tour al Valle Sagrado. </li>
+            </ul>
+
+            <h4 class="subtitulo">Día 1: Recojo:</h4>
+            <ul class="condiciones">
+                <li>Recepción en el aeropuerto de Cusco, traslado al hotel seleccionado.</li>
+                <li>13:30hrs: City Tour.- Los lugares a visitar son: Templo del Sol Qoricancha, La Catedral, Sacsayhuaman, Quenqo, Pucapucara y Tambomachay.</li>
+            </ul>
+
+            <h4 class="subtitulo">Día 2: Valle Sagrado:</h4>
+            <ul class="condiciones">
+                <li>Los lugares a visitar son: Pisaq, Ollantaytmabo conexion a Machupicchu </li>
+            </ul>
+
+            <h4 class="subtitulo">Día 3: Machu Picchu:</h4>
+            <ul class="condiciones">
+                <li>Visita a la ciudadela Inca de Machu Picchu. </li>
+            </ul>
+
+            <h4 class="subtitulo">Día 4: Libre:</h4>
+            <ul class="condiciones">
+                <li>Disfrutar de Cusco</li>
+            </ul>
+
+
+            <h4 class="subtitulo">Día 5: Montaña de 7 colores:</h4>
+            <ul class="condiciones">
+                <li>Día en que visitara la montaña de 7 colores, este tour es de un día completo, salimos 4 AM y retornamos alrededor de las 6 PM</li>
+            </ul>
+
+            <h4 class="subtitulo">Día 6: Retorno:</h4>
+            <ul class="condiciones">
+                <li>Traslado al aeropuerto o terminal.</li>
+            </ul>
+        </div>
+
+        <div class="seccion_derecha">
+            <div class="tarjeta-empresa-info">
+                <h3 class="info-titulo">Contáctenos</h3>
+                <p class="info-sub-titulo">Teléfonos</p>
+                <div class="telefono">
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 954 964 304</p>
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 920 470 208</p>
+                </div>
+                <p class="info-sub-titulo">Email</p>
+                <p class="email"><ion-icon name="mail-outline" class="icono-rojo"></ion-icon> OrtegaGonzales2024@gmail.com</p>
+                <p class="info-sub-titulo">Oficinas de Operaciones:</p>
+                <p class="direccion"> AV. Pachacuteq Nro. 307 Dpto. 202 (FT Perú Rail 2DO Piso, PTA CL Rojo), Cusco - WANCHAQ</p>
+                <p class="disponibilidad">Disponible de lunes a domingo</p>
+            </div>
+            <div class="tarjeta-tarifa">
+                <h4 class="textprecio">Tarifa:</h4>
+                <p class="precio">S/1,596.84 soles</p>
+                <p class="nota">(reserva ya!!)</p>
+                <button class="reservar-btn" >Contáctanos</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Ventana Modal -->
+<div id="personalizacion" class="personalizacion" style="display: none;">
+    <div class="personalizacion-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="modal-body">
+            <form id="reservaForm">
+                <div class="form-group">
+                    <label for="destino">Destino Turístico Seleccionado:</label>
+                    <input type="text" id="destino" name="destino" value="FULL DAY MONTAÑA DE 7 COLORES | VINICUNCA / RAINBOW MOUNTAIN" readonly required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ingrese su Nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese su Apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Ingrese su número" required maxlength="9" pattern="\d{9}" title="Debe ingresar exactamente 9 números">
+                </div>
+                <div class="form-group">
+                    <label for="tipDoc">Tipo Documento:</label>
+                    <select id="tipDoc" name="tipDoc" required>
+                        <option value="DNI">DNI</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="documento">N° de documento:</label>
+                    <input type="text" id="documento" name="documento" placeholder="Ingrese su documento de identidad" required  minlength="8" pattern="\d*" title="El documento debe contener entre 8 y 20 dígitos">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de Partida:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoViaje">Tipo de Viaje:</label>
+                    <select id="tipoViaje" name="tipoViaje" required>
+                        <option value="PUBLICO">Público</option>
+                        <option value="PRIVADO">Privado</option>
+                    </select>
+                </div>
+
+                <button type="button" id="contacto_reserva">Contáctanos</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Fragmento del footer -->
+<div th:replace="~{footer}"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+<script th:src="@{/js/personalisacion.js}"></script>
+</body>
+</html>

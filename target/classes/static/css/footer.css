@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en diferentes filas */
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.footer-section h3.titulo {
+    text-align: center; /* Centrar el texto de los títulos */
+    margin-bottom: 20px;
+    border-bottom: 4px solid white; /* Línea de separación debajo del título */
+    padding-bottom: 10px;
+    font-size: 25px; /* Aumentar el tamaño del texto del título */
+}
+
+.footer-section img {
+    display: block; /* Convertir la imagen en un bloque para centrarla */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    width: 100%;
+    margin-top:40px;
+}
+
+.dato-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.dato-icons li {
+    margin-bottom: 10px;
+}
+
+.dato-icons ion-icon {
+    margin-right: 10px;
+    font-size: 1.5em; /* Tamaño del icono */
+    color: white; /* Color del icono */
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Centrar el contenido de la lista */
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+    display: inline-block; /* Mostrar los elementos de la lista en línea para centrar */
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinear el contenido del enlace al centro */
+    font-size: 3em; /* Aumentar el tamaño de los iconos */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para color y tamaño */
+}
+
+/* Cambiar el color del icono al pasar el cursor sobre él */
+.social-icons a:hover {
+    color: white; /* Color de resaltado (ajustar según la red social) */
+    transform: scale(1.2); /* Agrandar el ícono ligeramente al pasar el cursor */
+}
+
+.social-icons a:active {
+    color: #ffcc00; /* Mismo color de resaltado al hacer clic */
+    transform: scale(1.1); /* Reducir un poco el tamaño del ícono al hacer clic para dar un efecto de presión */
+}
+
+.marca {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Cambiar la dirección del flex a columna */
+    }
+
+    .footer-section {
+        max-width: 100%;
+        margin: 10px 0; /* Ajustar el margen para pantallas pequeñas */
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .footer-section img {
+        display: none; /* Ocultar la imagen en pantallas pequeñas */
+    }
+}

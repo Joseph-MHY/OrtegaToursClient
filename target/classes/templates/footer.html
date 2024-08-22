@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+<div th:fragment="footer">
+    <footer class="footer">
+        <div class="footer-section">
+            <img th:src="@{/images/logov6.png}" alt="logo">
+        </div>
+
+
+        <div class="footer-section">
+            <h3 class="titulo">Contáctanos</h3>
+            <ul class="dato-icons">
+                <li><ion-icon name="location-outline"></ion-icon> AV. Pachacuteq Nro. 307 Dpto. 202 (FT Perú Rail 2DO Piso, PTA CL Rojo), Cusco - WANCHAQ</li>
+                <li><ion-icon name="logo-whatsapp"></ion-icon> +51 971 782 252</li>
+                <li><ion-icon name="logo-whatsapp"></ion-icon> +51 944 215 390</li>
+                <li><ion-icon name="mail-outline"></ion-icon> OrtegaGonzales2024@gmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="titulo">Nuestras Redes</h3>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/jhon.titosalcedo.1"><ion-icon name="logo-facebook"></ion-icon> </a></li>
+                <li><a href="https://wa.me/987412793"><ion-icon name="logo-whatsapp"></ion-icon> </a></li>
+                <li><a href="https://www.instagram.com/titosalcedojhon"><ion-icon name="logo-instagram"></ion-icon> </a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon> </a></li>
+            </ul>
+        </div>
+
+    </footer>
+</div>
+<div class="marca">
+    @Ortega Gonzales Perú 2024
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/footer.js}"></script>
+</body>
+</html>

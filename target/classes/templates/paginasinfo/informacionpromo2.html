@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Promociones</title>
+    <link rel="stylesheet" th:href="@{/css/Infomacion.css}">
+    <link rel="stylesheet" th:href="@{/css/personalisacion.css}">
+    <link rel="icon" type="image/png" href="/images/colibriv3.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<!-- Fragmento de la barra de navegación -->
+<div th:replace="~{navbar}"></div>
+
+
+<main>
+    <!-- Banner con imagen y texto superpuesto -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Ofrecemos más que un viaje, una experiencia inolvidable.</h2>
+        </div>
+    </div>
+
+    <section class="Informacion">
+        <div class="paquete-info">
+            <h3 class="titulo">Full Day Valle Sagrado | Todo Incluido</h3>
+            <p class="descripcion">¿Deseas conocer Valle Sagrado Cusco? Bienvenido a nuestro Full Day Valle Sagrado. En este Tour Todo Incluido recorrerás con nosotros los pueblos antiguos y principales conjuntos arquitectónicos. Disfruta la historia y misticismo de los Incas con nuestro Tour al Valle Sagrado!</p>
+
+            <h4 class="subtitulo">ITINERARIO:</h4>
+            <ul class="itinerario">
+                <p class="descripcion">08:30 am. Tour Valle Sagrado de los Incas: Visitaremos el pueblo de Pisac y su Mercado Artesanal, Qoya, Lamay, Calca, Yucay. Continuaremos nuestro recorrido hacia Urubamba, centro comercial del Valle, resaltan sus campiñas y su agradable clima al pie del nevado Chicón, aquí disfrutaremos de un almuerzo en restaurant turístico. </p>
+                <p class="descripcion">Luego seguiremos nuestro recorrido a Ollantaytambo; conjunto arquitectónico que fue en tiempos del Tahuantinsuyo un gigantesco complejo agrícola, administrativo, social, religioso y militar. Luego nos trasladaremos a Chinchero, el último punto del recorrido. Este pueblo es un bello ejemplo del estilo mestizo y colonial, a hora indicada regreso a Cusco y transfer a su Hotel.</p>
+            </ul>
+
+            <h4 class="subtitulo">Incluye:</h4>
+            <ul class="incluye">
+                <li>Traslados en unidad turística in/out Hotel</li>
+                <li>Almuerzo</li>
+                <li>Guía profesional en servicio Pool en inglés o español</li>
+                <li>Asistencia permanente</li>
+            </ul>
+            <h4 class="subtitulo">No Incluye:</h4>
+            <ul class="incluye">
+                <li>Ticket de ingreso:</li>
+                <li>Extranjeros S/ 70.00,</li>
+                <li>Peruanos S/ 40.00</li>
+            </ul>
+
+            <h4 class="subtitulo">Precio Por Persona:</h4>
+            <ul class="condiciones">
+                <li>Tour con almuerzo en restaurant Maizal: s/118.83</li>
+                <li>Tour con almuerzo en restaurant Alhambra: s/137.40 </li>
+                <li>Tour con almuerzo en restaurant Tunupa: s/155.97 </li>
+            </ul>
+        </div>
+
+        <div class="seccion_derecha">
+            <div class="tarjeta-empresa-info">
+                <h3 class="info-titulo">Contáctenos</h3>
+                <p class="info-sub-titulo">Teléfonos</p>
+                <div class="telefono">
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 954 964 304</p>
+                    <p class="telefono"><ion-icon name="logo-whatsapp" class="icono-verde"></ion-icon> +51 920 470 208</p>
+                </div>
+                <p class="info-sub-titulo">Email</p>
+                <p class="email"><ion-icon name="mail-outline" class="icono-rojo"></ion-icon> OrtegaGonzales2024@gmail.com</p>
+                <p class="info-sub-titulo">Oficinas de Operaciones:</p>
+                <p class="direccion"> AV. Pachacuteq Nro. 307 Dpto. 202 (FT Perú Rail 2DO Piso, PTA CL Rojo), Cusco - WANCHAQ</p>
+                <p class="disponibilidad">Disponible de lunes a domingo</p>
+            </div>
+            <div class="tarjeta-tarifa">
+                <h4 class="textprecio">Tarifa:</h4>
+                <p class="precio">S/82.14 soles</p>
+                <p class="nota">(Cupones limitados)</p>
+                <button class="reservar-btn">Contáctanos</button> <!-- Botón para abrir la ventana modal -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Ventana Modal -->
+<div id="personalizacion" class="personalizacion" style="display: none;">
+    <div class="personalizacion-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="modal-body">
+            <form id="reservaForm">
+                <div class="form-group">
+                    <label for="destino">Destino Turístico Seleccionado:</label>
+                    <input type="text" id="destino" name="destino" readonly required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ingrese su Nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese su Apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Ingrese su número" required maxlength="9" pattern="\d{9}" title="Debe ingresar exactamente 9 números">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipDoc">Tipo Documento:</label>
+                    <select id="tipDoc" name="tipDoc" required>
+                        <option value="DNI">DNI</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="documento">N° de documento:</label>
+                    <input type="text" id="documento" name="documento" placeholder="Ingrese su documento de identidad" required  minlength="8" pattern="\d*" title="El documento debe contener entre 8 y 20 dígitos">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de Partida:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoViaje">Tipo de Viaje:</label>
+                    <select id="tipoViaje" name="tipoViaje" required>
+                        <option value="PUBLICO">Público</option>
+                        <option value="PRIVADO">Privado</option>
+                    </select>
+                </div>
+
+                <button type="button" id="contacto_reserva">Contáctanos</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Fragmento del footer -->
+<div th:replace="~{footer}"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script th:src="@{/js/informacion.js}"></script>
+<script th:src="@{/js/personalisacion.js}"></script>
+</body>
+</html>
