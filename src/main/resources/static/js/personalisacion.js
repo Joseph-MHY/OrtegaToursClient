@@ -144,9 +144,8 @@ document.getElementById('contacto_reserva').addEventListener('click', function()
         tipoViaje: tipoViaje
     };
     console.log(data)
-
     // Enviar datos del formulario
-    axios.post('http://localhost:8090/user/guardar', data)
+    axios.post('https://ortegatoursclient.onrender.com/user/guardar', data)
         .then(response => {
             toastr.success(response.data);
 
